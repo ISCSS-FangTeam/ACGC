@@ -1,0 +1,632 @@
+{'num_workers': 4, 'voc12_root': '/home/ubt/devdata/zdy/AdvCAM/Dataset/cdy', 'train_list': 'cdy12/train_aug.txt', 'val_list': 'voc12/val.txt', 'infer_list': 'voc12/train_aug.txt', 'chainer_eval_set': 'train', 'cam_network': 'net.resnet50_cam', 'cam_crop_size': 512, 'cam_batch_size': 16, 'cam_num_epoches': 10, 'cam_learning_rate': 0.0001, 'cam_weight_decay': 0.0001, 'cam_eval_thres': 0.15, 'cam_scales': (1.0, 0.5, 1.5, 2.0), 'conf_fg_thres': 0.35, 'conf_bg_thres': 0.15, 'irn_network': 'net.resnet50_irn', 'irn_crop_size': 512, 'irn_batch_size': 32, 'irn_num_epoches': 3, 'irn_learning_rate': 0.1, 'irn_weight_decay': 0.0001, 'beta': 10, 'exp_times': 8, 'ins_seg_bg_thres': 0.25, 'sem_seg_bg_thres': 0.25, 'log_name': 'sample_train_eval', 'cam_weights_name': 'sess/res50_cam_cdy.pth', 'irn_weights_name': 'sess/res50_irn.pth', 'cam_out_dir': 'result/cam_adv_mask', 'ir_label_out_dir': 'result/ir_label', 'sem_seg_out_dir': 'result/sem_seg', 'ins_seg_out_dir': 'result/ins_seg', 'train_cam_pass': True, 'make_cam_pass': False, 'eval_cam_pass': False, 'cam_to_ir_label_pass': False, 'train_irn_pass': False, 'make_ins_seg_pass': False, 'eval_ins_seg_pass': False, 'make_sem_seg_pass': False, 'eval_sem_seg_pass': False}
+step.train_cam: Thu Apr 29 21:56:40 2021
+model pretrained initialized
+Epoch 1/10
+step:    0/ 1610 loss:0.6765 imps:27.7 lr: 0.0001 etc:Thu Apr 29 22:12:14 2021
+step:  100/ 1610 loss:0.4470 imps:128.4 lr: 0.0001 etc:Thu Apr 29 22:00:03 2021
+Epoch 2/10
+step:  200/ 1610 loss:0.3842 imps:25.8 lr: 0.0001 etc:Thu Apr 29 22:00:02 2021
+step:  300/ 1610 loss:0.3517 imps:60.7 lr: 0.0001 etc:Thu Apr 29 22:00:00 2021
+Epoch 3/10
+step:  400/ 1610 loss:0.3148 imps:25.6 lr: 0.0001 etc:Thu Apr 29 22:00:01 2021
+Epoch 4/10
+step:  500/ 1610 loss:0.2804 imps:4.7 lr: 0.0001 etc:Thu Apr 29 22:00:01 2021
+step:  600/ 1610 loss:0.2621 imps:25.5 lr: 0.0001 etc:Thu Apr 29 22:00:01 2021
+Epoch 5/10
+step:  700/ 1610 loss:0.2451 imps:10.5 lr: 0.0001 etc:Thu Apr 29 22:00:02 2021
+step:  800/ 1610 loss:0.2089 imps:25.4 lr: 0.0001 etc:Thu Apr 29 22:00:02 2021
+Epoch 6/10
+step:  900/ 1610 loss:0.2040 imps:13.8 lr: 0.0000 etc:Thu Apr 29 22:00:02 2021
+Epoch 7/10
+step: 1000/ 1610 loss:0.1937 imps:4.5 lr: 0.0000 etc:Thu Apr 29 22:00:03 2021
+step: 1100/ 1610 loss:0.1744 imps:15.8 lr: 0.0000 etc:Thu Apr 29 22:00:03 2021
+Epoch 8/10
+step: 1200/ 1610 loss:0.1570 imps:7.9 lr: 0.0000 etc:Thu Apr 29 22:00:03 2021
+Epoch 9/10
+step: 1300/ 1610 loss:0.1703 imps:1.3 lr: 0.0000 etc:Thu Apr 29 22:00:03 2021
+step: 1400/ 1610 loss:0.1532 imps:10.4 lr: 0.0000 etc:Thu Apr 29 22:00:03 2021
+Epoch 10/10
+step: 1500/ 1610 loss:0.1718 imps:4.4 lr: 0.0000 etc:Thu Apr 29 22:00:04 2021
+step: 1600/ 1610 loss:0.1500 imps:12.2 lr: 0.0000 etc:Thu Apr 29 22:00:04 2021{'num_workers': 4, 'voc12_root': '/home/ubt/devdata/VOCdevkit/VOC2012/', 'train_list': 'voc12/train_aug.txt', 'val_list': 'voc12/val.txt', 'infer_list': 'voc12/train_aug.txt', 'chainer_eval_set': 'train', 'cam_network': 'net.resnet50_cam', 'cam_crop_size': 512, 'cam_batch_size': 16, 'cam_num_epoches': 5, 'cam_learning_rate': 0.1, 'cam_weight_decay': 0.0001, 'cam_eval_thres': 0.15, 'cam_scales': (1.0, 0.5, 1.5, 2.0), 'conf_fg_thres': 0.35, 'conf_bg_thres': 0.15, 'irn_network': 'net.resnet50_irn', 'irn_crop_size': 512, 'irn_batch_size': 32, 'irn_num_epoches': 3, 'irn_learning_rate': 0.1, 'irn_weight_decay': 0.0001, 'beta': 10, 'exp_times': 8, 'ins_seg_bg_thres': 0.25, 'sem_seg_bg_thres': 0.25, 'log_name': 'sample_train_eval', 'cam_weights_name': 'sess/res50_cam.pth', 'irn_weights_name': 'sess/res50_irn.pth', 'cam_out_dir': 'result/cam_adv_mask_cdy', 'ir_label_out_dir': 'result/ir_label', 'sem_seg_out_dir': 'result/sem_seg', 'ins_seg_out_dir': 'result/ins_seg', 'train_cam_pass': False, 'make_cam_pass': False, 'eval_cam_pass': True, 'cam_to_ir_label_pass': False, 'train_irn_pass': False, 'make_ins_seg_pass': False, 'eval_ins_seg_pass': False, 'make_sem_seg_pass': False, 'eval_sem_seg_pass': False}
+step.eval_cam: Fri Apr 30 10:15:59 2021
+threshold: 0.15 iou: [0.1392432  0.48638452] miou: 0.3128138584269857 i_imgs 2136
+among_predfg_bg 0.5131077847368198
+threshold: 0.16 iou: [0.14572892 0.48808183] miou: 0.31690537869795854 i_imgs 2136
+among_predfg_bg 0.5113054054460361
+threshold: 0.17 iou: [0.15220675 0.48979498] miou: 0.3210008643533217 i_imgs 2136
+among_predfg_bg 0.509487450453273
+threshold: 0.18 iou: [0.15871325 0.49153113] miou: 0.3251221916765233 i_imgs 2136
+among_predfg_bg 0.5076446856974429
+threshold: 0.19 iou: [0.16526541 0.49329076] miou: 0.3292780852781434 i_imgs 2136
+among_predfg_bg 0.5057738798112767
+threshold: 0.2 iou: [0.17184983 0.49505869] miou: 0.3334542635053105 i_imgs 2136
+among_predfg_bg 0.5038838014773285
+threshold: 0.21 iou: [0.17851923 0.49685547] miou: 0.337687349530217 i_imgs 2136
+among_predfg_bg 0.5019557883031043
+threshold: 0.22 iou: [0.18524683 0.49868689] miou: 0.3419668625834491 i_imgs 2136
+among_predfg_bg 0.4999910715384247
+threshold: 0.23 iou: [0.19207271 0.50054482] miou: 0.34630876092609064 i_imgs 2136
+among_predfg_bg 0.4979858975477007
+threshold: 0.24 iou: [0.19897221 0.50243985] miou: 0.35070603249113813 i_imgs 2136
+among_predfg_bg 0.495938982679781
+threshold: 0.25 iou: [0.20594607 0.50437612] miou: 0.35516109290741704 i_imgs 2136
+among_predfg_bg 0.4938477791616588
+threshold: 0.26 iou: [0.21301528 0.50634517] miou: 0.35968022202858996 i_imgs 2136
+among_predfg_bg 0.4917114755362789
+threshold: 0.27 iou: [0.22014961 0.50833917] miou: 0.3642443871083558 i_imgs 2136
+among_predfg_bg 0.48953805586620586
+threshold: 0.28 iou: [0.22739889 0.51037049] miou: 0.3688846892989097 i_imgs 2136
+among_predfg_bg 0.4873119806247897
+threshold: 0.29 iou: [0.23474496 0.51242698] miou: 0.373585970125852 i_imgs 2136
+among_predfg_bg 0.48504055149414743
+threshold: 0.3 iou: [0.24226248 0.51454364] miou: 0.37840306051385114 i_imgs 2136
+among_predfg_bg 0.48269327902844583
+threshold: 0.31 iou: [0.24993418 0.51671082] miou: 0.3833225001329114 i_imgs 2136
+among_predfg_bg 0.4802757769372951
+threshold: 0.32 iou: [0.25779058 0.51893947] miou: 0.3883650235219074 i_imgs 2136
+among_predfg_bg 0.47777550007768727
+threshold: 0.33 iou: [0.26589992 0.52124722] miou: 0.39357357211466526 i_imgs 2136
+among_predfg_bg 0.4751688604958845
+threshold: 0.34 iou: [0.27427459 0.52363434] miou: 0.39895446156398645 i_imgs 2136
+among_predfg_bg 0.47244995081673835
+result/cam_adv_mask_cdy
+[0.3128138584269857, 0.31690537869795854, 0.3210008643533217, 0.3251221916765233, 0.3292780852781434, 0.3334542635053105, 0.337687349530217, 0.3419668625834491, 0.34630876092609064, 0.35070603249113813, 0.35516109290741704, 0.35968022202858996, 0.3642443871083558, 0.3688846892989097, 0.373585970125852, 0.37840306051385114, 0.3833225001329114, 0.3883650235219074, 0.39357357211466526, 0.39895446156398645]
+0.39895446156398645
+{'num_workers': 4, 'voc12_root': '/home/ubt/devdata/VOCdevkit/VOC2012/', 'train_list': 'voc12/train_aug.txt', 'val_list': 'voc12/val.txt', 'infer_list': 'voc12/train_aug.txt', 'chainer_eval_set': 'train', 'cam_network': 'net.resnet50_cam', 'cam_crop_size': 512, 'cam_batch_size': 16, 'cam_num_epoches': 5, 'cam_learning_rate': 0.1, 'cam_weight_decay': 0.0001, 'cam_eval_thres': 0.15, 'cam_scales': (1.0, 0.5, 1.5, 2.0), 'conf_fg_thres': 0.35, 'conf_bg_thres': 0.15, 'irn_network': 'net.resnet50_irn', 'irn_crop_size': 512, 'irn_batch_size': 32, 'irn_num_epoches': 3, 'irn_learning_rate': 0.1, 'irn_weight_decay': 0.0001, 'beta': 10, 'exp_times': 8, 'ins_seg_bg_thres': 0.25, 'sem_seg_bg_thres': 0.25, 'log_name': 'sample_train_eval', 'cam_weights_name': 'sess/res50_cam.pth', 'irn_weights_name': 'sess/res50_irn.pth', 'cam_out_dir': 'result/cam_adv_mask_cdy', 'ir_label_out_dir': 'result/ir_label', 'sem_seg_out_dir': 'result/sem_seg', 'ins_seg_out_dir': 'result/ins_seg', 'train_cam_pass': False, 'make_cam_pass': False, 'eval_cam_pass': True, 'cam_to_ir_label_pass': False, 'train_irn_pass': False, 'make_ins_seg_pass': False, 'eval_ins_seg_pass': False, 'make_sem_seg_pass': False, 'eval_sem_seg_pass': False}
+step.eval_cam: Fri Apr 30 10:18:29 2021
+threshold: 0.35 iou: [0.28286457 0.52609434] miou: 0.4044794526807246 i_imgs 2136
+among_predfg_bg 0.46962866248995216
+threshold: 0.36 iou: [0.29174265 0.52862803] miou: 0.41018533776050115 i_imgs 2136
+among_predfg_bg 0.46668483000516275
+threshold: 0.37 iou: [0.30093005 0.5312393 ] miou: 0.41608467134126403 i_imgs 2136
+among_predfg_bg 0.4636071078184854
+threshold: 0.38 iou: [0.31045032 0.53394181] miou: 0.42219606405613475 i_imgs 2136
+among_predfg_bg 0.46037911781576046
+threshold: 0.39 iou: [0.32031686 0.53671071] miou: 0.4285137866483598 i_imgs 2136
+among_predfg_bg 0.45699942500271623
+threshold: 0.4 iou: [0.33059695 0.53958145] miou: 0.4350892010695655 i_imgs 2136
+among_predfg_bg 0.4534303167335053
+threshold: 0.41 iou: [0.34136202 0.54258434] miou: 0.4419731766402948 i_imgs 2136
+among_predfg_bg 0.4496326329819931
+threshold: 0.42 iou: [0.35255167 0.54568932] miou: 0.4491204963163746 i_imgs 2136
+among_predfg_bg 0.4456195225564314
+threshold: 0.43 iou: [0.36418276 0.54889709] miou: 0.4565399224312707 i_imgs 2136
+among_predfg_bg 0.44137198109920545
+threshold: 0.44 iou: [0.37631971 0.55221584] miou: 0.4642677769133128 i_imgs 2136
+among_predfg_bg 0.43685181093308617
+threshold: 0.45 iou: [0.38895333 0.5555989 ] miou: 0.4722761149631914 i_imgs 2136
+among_predfg_bg 0.432053258462205
+threshold: 0.46 iou: [0.40206348 0.55905   ] miou: 0.48055674256918135 i_imgs 2136
+among_predfg_bg 0.42695507220878964
+threshold: 0.47 iou: [0.4156431  0.56254625] miou: 0.4890946708855345 i_imgs 2136
+among_predfg_bg 0.4215349462110565
+threshold: 0.48 iou: [0.42953189 0.56597157] miou: 0.49775172946425766 i_imgs 2136
+among_predfg_bg 0.41584044286924693
+threshold: 0.49 iou: [0.44380918 0.56937442] miou: 0.506591801778282 i_imgs 2136
+among_predfg_bg 0.4097913269036069
+threshold: 0.5 iou: [0.4585092  0.57272878] miou: 0.5156189891893981 i_imgs 2136
+among_predfg_bg 0.4033290241776723
+threshold: 0.51 iou: [0.47348963 0.57590105] miou: 0.5246953411226095 i_imgs 2136
+among_predfg_bg 0.39647325789135945
+threshold: 0.52 iou: [0.48864646 0.57884261] miou: 0.53374453731655 i_imgs 2136
+among_predfg_bg 0.3892055871217767
+threshold: 0.53 iou: [0.50386875 0.58148169] miou: 0.5426752201798066 i_imgs 2136
+among_predfg_bg 0.3815083769278284
+threshold: 0.54 iou: [0.51876834 0.58354013] miou: 0.5511542351850683 i_imgs 2136
+among_predfg_bg 0.373523743374868
+result/cam_adv_mask_cdy
+[0.4044794526807246, 0.41018533776050115, 0.41608467134126403, 0.42219606405613475, 0.4285137866483598, 0.4350892010695655, 0.4419731766402948, 0.4491204963163746, 0.4565399224312707, 0.4642677769133128, 0.4722761149631914, 0.48055674256918135, 0.4890946708855345, 0.49775172946425766, 0.506591801778282, 0.5156189891893981, 0.5246953411226095, 0.53374453731655, 0.5426752201798066, 0.5511542351850683]
+0.5511542351850683
+{'num_workers': 4, 'voc12_root': '/home/ubt/devdata/VOCdevkit/VOC2012/', 'train_list': 'voc12/train_aug.txt', 'val_list': 'voc12/val.txt', 'infer_list': 'voc12/train_aug.txt', 'chainer_eval_set': 'train', 'cam_network': 'net.resnet50_cam', 'cam_crop_size': 512, 'cam_batch_size': 16, 'cam_num_epoches': 5, 'cam_learning_rate': 0.1, 'cam_weight_decay': 0.0001, 'cam_eval_thres': 0.15, 'cam_scales': (1.0, 0.5, 1.5, 2.0), 'conf_fg_thres': 0.35, 'conf_bg_thres': 0.15, 'irn_network': 'net.resnet50_irn', 'irn_crop_size': 512, 'irn_batch_size': 32, 'irn_num_epoches': 3, 'irn_learning_rate': 0.1, 'irn_weight_decay': 0.0001, 'beta': 10, 'exp_times': 8, 'ins_seg_bg_thres': 0.25, 'sem_seg_bg_thres': 0.25, 'log_name': 'sample_train_eval', 'cam_weights_name': 'sess/res50_cam.pth', 'irn_weights_name': 'sess/res50_irn.pth', 'cam_out_dir': 'result/cam_adv_mask_cdy', 'ir_label_out_dir': 'result/ir_label', 'sem_seg_out_dir': 'result/sem_seg', 'ins_seg_out_dir': 'result/ins_seg', 'train_cam_pass': False, 'make_cam_pass': False, 'eval_cam_pass': True, 'cam_to_ir_label_pass': False, 'train_irn_pass': False, 'make_ins_seg_pass': False, 'eval_ins_seg_pass': False, 'make_sem_seg_pass': False, 'eval_sem_seg_pass': False}
+step.eval_cam: Fri Apr 30 10:20:40 2021
+threshold: 0.55 iou: [0.53343433 0.5850108 ] miou: 0.5592225662888844 i_imgs 2136
+among_predfg_bg 0.3651187214642146
+threshold: 0.56 iou: [0.54770873 0.58578378] miou: 0.5667462540792758 i_imgs 2136
+among_predfg_bg 0.35628881429220205
+threshold: 0.57 iou: [0.56144065 0.58570976] miou: 0.5735752004972382 i_imgs 2136
+among_predfg_bg 0.34702651692730097
+threshold: 0.58 iou: [0.57450569 0.58467807] miou: 0.5795918786664263 i_imgs 2136
+among_predfg_bg 0.3373071456969192
+threshold: 0.59 iou: [0.586871   0.58254446] miou: 0.5847077294185944 i_imgs 2136
+among_predfg_bg 0.3270287782333778
+threshold: 0.6 iou: [0.5982796  0.57903347] miou: 0.5886565346089307 i_imgs 2136
+among_predfg_bg 0.3162517322035806
+threshold: 0.61 iou: [0.60857784 0.57399903] miou: 0.5912884373179186 i_imgs 2136
+among_predfg_bg 0.3049909587050933
+threshold: 0.62 iou: [0.61748332 0.56707639] miou: 0.5922798553784325 i_imgs 2136
+among_predfg_bg 0.2933912693329272
+threshold: 0.63 iou: [0.62478028 0.55809319] miou: 0.5914367326702578 i_imgs 2136
+among_predfg_bg 0.28165232074172286
+threshold: 0.64 iou: [0.6303833  0.54691019] miou: 0.5886467436134954 i_imgs 2136
+among_predfg_bg 0.2699214378498237
+threshold: 0.65 iou: [0.63436997 0.53347666] miou: 0.5839233163954319 i_imgs 2136
+among_predfg_bg 0.2582088203446728
+threshold: 0.66 iou: [0.63671169 0.51761536] miou: 0.577163524235198 i_imgs 2136
+among_predfg_bg 0.2466670844243191
+threshold: 0.67 iou: [0.63759163 0.499531  ] miou: 0.5685613156434106 i_imgs 2136
+among_predfg_bg 0.23531039963323386
+threshold: 0.68 iou: [0.63717787 0.47934861] miou: 0.5582632413887605 i_imgs 2136
+among_predfg_bg 0.22413171570954435
+threshold: 0.69 iou: [0.63540799 0.45685832] miou: 0.5461331524555706 i_imgs 2136
+among_predfg_bg 0.21343521753475336
+threshold: 0.7 iou: [0.63255561 0.43256749] miou: 0.5325615496634988 i_imgs 2136
+among_predfg_bg 0.20326015969942457
+threshold: 0.71 iou: [0.62887655 0.40691005] miou: 0.517893297677348 i_imgs 2136
+among_predfg_bg 0.1935791835839796
+threshold: 0.72 iou: [0.62457564 0.38028666] miou: 0.5024311507155157 i_imgs 2136
+among_predfg_bg 0.18440776032052536
+threshold: 0.73 iou: [0.61981296 0.35310704] miou: 0.4864600007652773 i_imgs 2136
+among_predfg_bg 0.1758611996748775
+threshold: 0.74 iou: [0.61480964 0.32579521] miou: 0.47030242792769694 i_imgs 2136
+among_predfg_bg 0.16776874495370134
+result/cam_adv_mask_cdy
+[0.5592225662888844, 0.5667462540792758, 0.5735752004972382, 0.5795918786664263, 0.5847077294185944, 0.5886565346089307, 0.5912884373179186, 0.5922798553784325, 0.5914367326702578, 0.5886467436134954, 0.5839233163954319, 0.577163524235198, 0.5685613156434106, 0.5582632413887605, 0.5461331524555706, 0.5325615496634988, 0.517893297677348, 0.5024311507155157, 0.4864600007652773, 0.47030242792769694]
+0.5922798553784325
+{'num_workers': 4, 'voc12_root': '/home/ubt/devdata/zdy/AdvCAM/Dataset/cdy', 'train_list': 'cdy12/train_aug.txt', 'val_list': 'voc12/val.txt', 'infer_list': 'voc12/train_aug.txt', 'chainer_eval_set': 'train', 'cam_network': 'net.resnet50_cam', 'cam_crop_size': 512, 'cam_batch_size': 16, 'cam_num_epoches': 5, 'cam_learning_rate': 0.1, 'cam_weight_decay': 0.0001, 'cam_eval_thres': 0.15, 'cam_scales': (1.0, 0.5, 1.5, 2.0), 'conf_fg_thres': 0.55, 'conf_bg_thres': 0.45, 'irn_network': 'net.resnet50_irn', 'irn_crop_size': 512, 'irn_batch_size': 32, 'irn_num_epoches': 3, 'irn_learning_rate': 0.1, 'irn_weight_decay': 0.0001, 'beta': 10, 'exp_times': 8, 'ins_seg_bg_thres': 0.25, 'sem_seg_bg_thres': 0.25, 'log_name': 'sample_train_eval', 'cam_weights_name': 'sess/res50_cam.pth', 'irn_weights_name': 'sess/res50_irn.pth', 'cam_out_dir': 'result/cam_adv_mask_cdy', 'ir_label_out_dir': 'result/ir_label_cdy', 'sem_seg_out_dir': 'result/sem_seg', 'ins_seg_out_dir': 'result/ins_seg', 'train_cam_pass': False, 'make_cam_pass': False, 'eval_cam_pass': False, 'cam_to_ir_label_pass': True, 'train_irn_pass': False, 'make_ins_seg_pass': False, 'eval_ins_seg_pass': False, 'make_sem_seg_pass': False, 'eval_sem_seg_pass': False}
+step.cam_to_ir_label: Fri Apr 30 11:02:04 2021
+[ ]
+{'num_workers': 4, 'voc12_root': '/home/ubt/devdata/zdy/AdvCAM/Dataset/cdy', 'train_list': 'cdy12/train_aug_building.txt', 'val_list': 'voc12/val.txt', 'infer_list': 'cdy12/train_aug_building.txt', 'chainer_eval_set': 'train', 'cam_network': 'net.resnet50_cam', 'cam_crop_size': 512, 'cam_batch_size': 16, 'cam_num_epoches': 5, 'cam_learning_rate': 0.1, 'cam_weight_decay': 0.0001, 'cam_eval_thres': 0.15, 'cam_scales': (1.0, 0.5, 1.5, 2.0), 'conf_fg_thres': 0.35, 'conf_bg_thres': 0.15, 'irn_network': 'net.resnet50_irn', 'irn_crop_size': 256, 'irn_batch_size': 32, 'irn_num_epoches': 10, 'irn_learning_rate': 0.01, 'irn_weight_decay': 0.0001, 'beta': 10, 'exp_times': 8, 'ins_seg_bg_thres': 0.25, 'sem_seg_bg_thres': 0.25, 'log_name': 'sample_train_eval', 'cam_weights_name': 'sess/res50_cam.pth', 'irn_weights_name': 'sess/res50_irn_cdy.pth', 'cam_out_dir': 'result/cam_adv_mask', 'ir_label_out_dir': 'result/ir_label_cdy', 'sem_seg_out_dir': 'result/sem_seg', 'ins_seg_out_dir': 'result/ins_seg', 'train_cam_pass': False, 'make_cam_pass': False, 'eval_cam_pass': False, 'cam_to_ir_label_pass': False, 'train_irn_pass': True, 'make_ins_seg_pass': False, 'eval_ins_seg_pass': False, 'make_sem_seg_pass': False, 'eval_sem_seg_pass': False}
+step.train_irn: Fri Apr 30 11:29:46 2021
+model pretrained initialized
+Epoch 1/10
+step:    0/  660 loss:1.0173 0.4086 4.1586 0.1808 imps:24.8 lr: 0.0100 etc:Fri Apr 30 11:43:59 2021
+step:   50/  660 loss:0.6848 0.5486 4.1342 0.0429 imps:134.8 lr: 0.0093 etc:Fri Apr 30 11:32:25 2021
+Epoch 2/10
+step:  100/  660 loss:0.5617 0.4886 4.1373 0.0137 imps:137.6 lr: 0.0086 etc:Fri Apr 30 11:32:22 2021
+Epoch 3/10
+step:  150/  660 loss:0.5124 0.4529 4.1385 0.0098 imps:134.1 lr: 0.0079 etc:Fri Apr 30 11:32:21 2021
+Epoch 4/10
+step:  200/  660 loss:0.4757 0.4239 4.1370 0.0075 imps:81.0 lr: 0.0072 etc:Fri Apr 30 11:32:20 2021
+step:  250/  660 loss:0.4617 0.4096 4.1365 0.0065 imps:140.3 lr: 0.0065 etc:Fri Apr 30 11:32:19 2021
+Epoch 5/10
+step:  300/  660 loss:0.4459 0.3926 4.1355 0.0059 imps:135.9 lr: 0.0058 etc:Fri Apr 30 11:32:19 2021
+Epoch 6/10
+step:  350/  660 loss:0.4350 0.3786 4.1308 0.0059 imps:131.5 lr: 0.0051 etc:Fri Apr 30 11:32:19 2021
+Epoch 7/10
+step:  400/  660 loss:0.4272 0.3792 4.1292 0.0066 imps:107.1 lr: 0.0043 etc:Fri Apr 30 11:32:19 2021
+step:  450/  660 loss:0.4194 0.3626 4.1239 0.0082 imps:141.0 lr: 0.0036 etc:Fri Apr 30 11:32:19 2021
+Epoch 8/10
+step:  500/  660 loss:0.4168 0.3543 4.1155 0.0108 imps:139.2 lr: 0.0028 etc:Fri Apr 30 11:32:19 2021
+Epoch 9/10
+step:  550/  660 loss:0.4168 0.3580 4.0983 0.0152 imps:131.1 lr: 0.0020 etc:Fri Apr 30 11:32:19 2021
+Epoch 10/10
+step:  600/  660 loss:0.4068 0.3514 4.0818 0.0216 imps:109.1 lr: 0.0012 etc:Fri Apr 30 11:32:19 2021
+step:  650/  660 loss:0.4107 0.3505 4.0638 0.0265 imps:139.8 lr: 0.0002 etc:Fri Apr 30 11:32:19 2021
+Analyzing displacements mean ... done.
+{'num_workers': 4, 'voc12_root': '/home/ubt/devdata/zdy/AdvCAM/Dataset/cdy', 'train_list': 'voc12/train_aug.txt', 'val_list': 'voc12/val.txt', 'infer_list': 'cdy12/train_aug_building.txt', 'chainer_eval_set': 'train', 'cam_network': 'net.resnet50_cam', 'cam_crop_size': 512, 'cam_batch_size': 16, 'cam_num_epoches': 5, 'cam_learning_rate': 0.1, 'cam_weight_decay': 0.0001, 'cam_eval_thres': 0.15, 'cam_scales': (1.0, 0.5, 1.5, 2.0), 'conf_fg_thres': 0.35, 'conf_bg_thres': 0.15, 'irn_network': 'net.resnet50_irn', 'irn_crop_size': 512, 'irn_batch_size': 32, 'irn_num_epoches': 3, 'irn_learning_rate': 0.1, 'irn_weight_decay': 0.0001, 'beta': 10, 'exp_times': 8, 'ins_seg_bg_thres': 0.25, 'sem_seg_bg_thres': '0.45', 'log_name': 'sample_train_eval', 'cam_weights_name': 'sess/res50_cam.pth', 'irn_weights_name': 'sess/res50_irn_cdy.pth', 'cam_out_dir': 'result/cam_adv_mask_cdy', 'ir_label_out_dir': 'result/ir_label', 'sem_seg_out_dir': 'result/sem_seg_cdy', 'ins_seg_out_dir': 'result/ins_seg', 'train_cam_pass': False, 'make_cam_pass': False, 'eval_cam_pass': False, 'cam_to_ir_label_pass': False, 'train_irn_pass': False, 'make_ins_seg_pass': False, 'eval_ins_seg_pass': False, 'make_sem_seg_pass': True, 'eval_sem_seg_pass': False}
+step.make_sem_seg_labels: Fri Apr 30 12:15:09 2021
+model pretrained initialized
+sess/res50_irn_cdy.pth
+[]
+{'num_workers': 4, 'voc12_root': '/home/ubt/devdata/VOCdevkit/VOC2012/', 'train_list': 'voc12/train_aug.txt', 'val_list': 'voc12/val.txt', 'infer_list': 'voc12/train_aug.txt', 'chainer_eval_set': 'train', 'cam_network': 'net.resnet50_cam', 'cam_crop_size': 512, 'cam_batch_size': 16, 'cam_num_epoches': 5, 'cam_learning_rate': 0.1, 'cam_weight_decay': 0.0001, 'cam_eval_thres': 0.15, 'cam_scales': (1.0, 0.5, 1.5, 2.0), 'conf_fg_thres': 0.35, 'conf_bg_thres': 0.15, 'irn_network': 'net.resnet50_irn', 'irn_crop_size': 512, 'irn_batch_size': 32, 'irn_num_epoches': 3, 'irn_learning_rate': 0.1, 'irn_weight_decay': 0.0001, 'beta': 10, 'exp_times': 8, 'ins_seg_bg_thres': 0.25, 'sem_seg_bg_thres': 0.25, 'log_name': 'sample_train_eval', 'cam_weights_name': 'sess/res50_cam.pth', 'irn_weights_name': 'sess/res50_irn.pth', 'cam_out_dir': 'result/cam_adv_mask', 'ir_label_out_dir': 'result/ir_label', 'sem_seg_out_dir': 'result/sem_seg_cdy', 'ins_seg_out_dir': 'result/ins_seg', 'train_cam_pass': False, 'make_cam_pass': False, 'eval_cam_pass': False, 'cam_to_ir_label_pass': False, 'train_irn_pass': False, 'make_ins_seg_pass': False, 'eval_ins_seg_pass': False, 'make_sem_seg_pass': False, 'eval_sem_seg_pass': True}
+step.eval_sem_seg: Fri Apr 30 12:36:06 2021
+total images 2136
+0.047127539566668486 0.42439771254426395
+0.3524512124675442 0.03913819035759303
+{'iou': array([0.52847475, 0.6084106 ]), 'miou': 0.5684426725319652}
+{'num_workers': 4, 'voc12_root': '/home/ubt/devdata/zdy/AdvCAM/Dataset/cdy', 'train_list': 'voc12/train_aug.txt', 'val_list': 'voc12/val.txt', 'infer_list': 'cdy12/train_aug_building.txt', 'chainer_eval_set': 'train', 'cam_network': 'net.resnet50_cam', 'cam_crop_size': 512, 'cam_batch_size': 16, 'cam_num_epoches': 5, 'cam_learning_rate': 0.1, 'cam_weight_decay': 0.0001, 'cam_eval_thres': 0.15, 'cam_scales': (1.0, 0.5, 1.5, 2.0), 'conf_fg_thres': 0.35, 'conf_bg_thres': 0.15, 'irn_network': 'net.resnet50_irn', 'irn_crop_size': 512, 'irn_batch_size': 32, 'irn_num_epoches': 3, 'irn_learning_rate': 0.1, 'irn_weight_decay': 0.0001, 'beta': 10, 'exp_times': 8, 'ins_seg_bg_thres': 0.25, 'sem_seg_bg_thres': '0.7', 'log_name': 'sample_train_eval', 'cam_weights_name': 'sess/res50_cam.pth', 'irn_weights_name': 'sess/res50_irn_cdy.pth', 'cam_out_dir': 'result/cam_adv_mask_cdy', 'ir_label_out_dir': 'result/ir_label', 'sem_seg_out_dir': 'result/sem_seg_cdy', 'ins_seg_out_dir': 'result/ins_seg', 'train_cam_pass': False, 'make_cam_pass': False, 'eval_cam_pass': False, 'cam_to_ir_label_pass': False, 'train_irn_pass': False, 'make_ins_seg_pass': False, 'eval_ins_seg_pass': False, 'make_sem_seg_pass': True, 'eval_sem_seg_pass': False}
+step.make_sem_seg_labels: Fri Apr 30 14:09:16 2021
+model pretrained initialized
+sess/res50_irn_cdy.pth
+[]
+{'num_workers': 4, 'voc12_root': '/home/ubt/devdata/VOCdevkit/VOC2012/', 'train_list': 'voc12/train_aug.txt', 'val_list': 'voc12/val.txt', 'infer_list': 'voc12/train_aug.txt', 'chainer_eval_set': 'train', 'cam_network': 'net.resnet50_cam', 'cam_crop_size': 512, 'cam_batch_size': 16, 'cam_num_epoches': 5, 'cam_learning_rate': 0.1, 'cam_weight_decay': 0.0001, 'cam_eval_thres': 0.15, 'cam_scales': (1.0, 0.5, 1.5, 2.0), 'conf_fg_thres': 0.35, 'conf_bg_thres': 0.15, 'irn_network': 'net.resnet50_irn', 'irn_crop_size': 512, 'irn_batch_size': 32, 'irn_num_epoches': 3, 'irn_learning_rate': 0.1, 'irn_weight_decay': 0.0001, 'beta': 10, 'exp_times': 8, 'ins_seg_bg_thres': 0.25, 'sem_seg_bg_thres': 0.25, 'log_name': 'sample_train_eval', 'cam_weights_name': 'sess/res50_cam.pth', 'irn_weights_name': 'sess/res50_irn.pth', 'cam_out_dir': 'result/cam_adv_mask', 'ir_label_out_dir': 'result/ir_label', 'sem_seg_out_dir': 'result/sem_seg_cdy', 'ins_seg_out_dir': 'result/ins_seg', 'train_cam_pass': False, 'make_cam_pass': False, 'eval_cam_pass': False, 'cam_to_ir_label_pass': False, 'train_irn_pass': False, 'make_ins_seg_pass': False, 'eval_ins_seg_pass': False, 'make_sem_seg_pass': False, 'eval_sem_seg_pass': True}
+step.eval_sem_seg: Fri Apr 30 14:18:07 2021
+[[50902952 26083801]
+ [ 7387381 55610762]]
+total images 2136
+0.08755504382421275 0.3091445181529211
+0.2928068228955578 0.08292792757194434
+{'iou': array([0.60330044, 0.62426525]), 'miou': 0.613782843777682}
+{'num_workers': 4, 'voc12_root': '/home/ubt/devdata/zdy/AdvCAM/Dataset/cdy', 'train_list': 'voc12/train_aug.txt', 'val_list': 'voc12/val.txt', 'infer_list': 'cdy12/train_aug_building.txt', 'chainer_eval_set': 'train', 'cam_network': 'net.resnet50_cam', 'cam_crop_size': 512, 'cam_batch_size': 16, 'cam_num_epoches': 5, 'cam_learning_rate': 0.1, 'cam_weight_decay': 0.0001, 'cam_eval_thres': 0.15, 'cam_scales': (1.0, 0.5, 1.5, 2.0), 'conf_fg_thres': 0.35, 'conf_bg_thres': 0.15, 'irn_network': 'net.resnet50_irn', 'irn_crop_size': 512, 'irn_batch_size': 32, 'irn_num_epoches': 3, 'irn_learning_rate': 0.1, 'irn_weight_decay': 0.0001, 'beta': 10, 'exp_times': 8, 'ins_seg_bg_thres': 0.25, 'sem_seg_bg_thres': '0.6', 'log_name': 'sample_train_eval', 'cam_weights_name': 'sess/res50_cam.pth', 'irn_weights_name': 'sess/res50_irn_cdy.pth', 'cam_out_dir': 'result/cam_adv_mask_cdy', 'ir_label_out_dir': 'result/ir_label', 'sem_seg_out_dir': 'result/sem_seg_cdy', 'ins_seg_out_dir': 'result/ins_seg', 'train_cam_pass': False, 'make_cam_pass': False, 'eval_cam_pass': False, 'cam_to_ir_label_pass': False, 'train_irn_pass': False, 'make_ins_seg_pass': False, 'eval_ins_seg_pass': False, 'make_sem_seg_pass': True, 'eval_sem_seg_pass': False}
+step.make_sem_seg_labels: Fri Apr 30 18:15:54 2021
+model pretrained initialized
+sess/res50_irn_cdy.pth
+[]
+{'num_workers': 4, 'voc12_root': '/home/ubt/devdata/VOCdevkit/VOC2012/', 'train_list': 'voc12/train_aug.txt', 'val_list': 'voc12/val.txt', 'infer_list': 'voc12/train_aug.txt', 'chainer_eval_set': 'train', 'cam_network': 'net.resnet50_cam', 'cam_crop_size': 512, 'cam_batch_size': 16, 'cam_num_epoches': 5, 'cam_learning_rate': 0.1, 'cam_weight_decay': 0.0001, 'cam_eval_thres': 0.15, 'cam_scales': (1.0, 0.5, 1.5, 2.0), 'conf_fg_thres': 0.35, 'conf_bg_thres': 0.15, 'irn_network': 'net.resnet50_irn', 'irn_crop_size': 512, 'irn_batch_size': 32, 'irn_num_epoches': 3, 'irn_learning_rate': 0.1, 'irn_weight_decay': 0.0001, 'beta': 10, 'exp_times': 8, 'ins_seg_bg_thres': 0.25, 'sem_seg_bg_thres': 0.25, 'log_name': 'sample_train_eval', 'cam_weights_name': 'sess/res50_cam.pth', 'irn_weights_name': 'sess/res50_irn.pth', 'cam_out_dir': 'result/cam_adv_mask', 'ir_label_out_dir': 'result/ir_label', 'sem_seg_out_dir': 'result/sem_seg_cdy', 'ins_seg_out_dir': 'result/ins_seg', 'train_cam_pass': False, 'make_cam_pass': False, 'eval_cam_pass': False, 'cam_to_ir_label_pass': False, 'train_irn_pass': False, 'make_ins_seg_pass': False, 'eval_ins_seg_pass': False, 'make_sem_seg_pass': False, 'eval_sem_seg_pass': True}
+step.eval_sem_seg: Fri Apr 30 18:24:45 2021
+[[47361172 29625581]
+ [ 5535881 57462262]]
+total images 2136
+0.06708318350575193 0.3589994594695075
+0.3198487355140245 0.05976741984591338
+{'iou': array([0.57391736, 0.62038384]), 'miou': 0.5971506008324015}
+
+{'num_workers': 4, 'voc12_root': '/home/ubt/devdata/zdy/AdvCAM/Dataset/cdy', 'train_list': 'voc12/train_aug.txt', 'val_list': 'voc12/val.txt', 'infer_list': 'cdy12/train_aug_building.txt', 'chainer_eval_set': 'train', 'cam_network': 'net.resnet50_cam', 'cam_crop_size': 512, 'cam_batch_size': 16, 'cam_num_epoches': 5, 'cam_learning_rate': 0.1, 'cam_weight_decay': 0.0001, 'cam_eval_thres': 0.15, 'cam_scales': (1.0, 0.5, 1.5, 2.0), 'conf_fg_thres': 0.35, 'conf_bg_thres': 0.15, 'irn_network': 'net.resnet50_irn', 'irn_crop_size': 512, 'irn_batch_size': 32, 'irn_num_epoches': 3, 'irn_learning_rate': 0.1, 'irn_weight_decay': 0.0001, 'beta': 10, 'exp_times': 8, 'ins_seg_bg_thres': 0.25, 'sem_seg_bg_thres': '0.8', 'log_name': 'sample_train_eval', 'cam_weights_name': 'sess/res50_cam.pth', 'irn_weights_name': 'sess/res50_irn_cdy.pth', 'cam_out_dir': 'result/cam_adv_mask_cdy', 'ir_label_out_dir': 'result/ir_label', 'sem_seg_out_dir': 'result/sem_seg_cdy', 'ins_seg_out_dir': 'result/ins_seg', 'train_cam_pass': False, 'make_cam_pass': False, 'eval_cam_pass': False, 'cam_to_ir_label_pass': False, 'train_irn_pass': False, 'make_ins_seg_pass': False, 'eval_ins_seg_pass': False, 'make_sem_seg_pass': True, 'eval_sem_seg_pass': False}
+step.make_sem_seg_labels: Fri Apr 30 19:54:48 2021
+model pretrained initialized
+sess/res50_irn_cdy.pth
+[]
+{'num_workers': 4, 'voc12_root': '/home/ubt/devdata/VOCdevkit/VOC2012/', 'train_list': 'voc12/train_aug.txt', 'val_list': 'voc12/val.txt', 'infer_list': 'voc12/train_aug.txt', 'chainer_eval_set': 'train', 'cam_network': 'net.resnet50_cam', 'cam_crop_size': 512, 'cam_batch_size': 16, 'cam_num_epoches': 5, 'cam_learning_rate': 0.1, 'cam_weight_decay': 0.0001, 'cam_eval_thres': 0.15, 'cam_scales': (1.0, 0.5, 1.5, 2.0), 'conf_fg_thres': 0.35, 'conf_bg_thres': 0.15, 'irn_network': 'net.resnet50_irn', 'irn_crop_size': 512, 'irn_batch_size': 32, 'irn_num_epoches': 3, 'irn_learning_rate': 0.1, 'irn_weight_decay': 0.0001, 'beta': 10, 'exp_times': 8, 'ins_seg_bg_thres': 0.25, 'sem_seg_bg_thres': 0.25, 'log_name': 'sample_train_eval', 'cam_weights_name': 'sess/res50_cam.pth', 'irn_weights_name': 'sess/res50_irn.pth', 'cam_out_dir': 'result/cam_adv_mask', 'ir_label_out_dir': 'result/ir_label', 'sem_seg_out_dir': 'result/sem_seg_cdy', 'ins_seg_out_dir': 'result/ins_seg', 'train_cam_pass': False, 'make_cam_pass': False, 'eval_cam_pass': False, 'cam_to_ir_label_pass': False, 'train_irn_pass': False, 'make_ins_seg_pass': False, 'eval_ins_seg_pass': False, 'make_sem_seg_pass': False, 'eval_sem_seg_pass': True}
+step.eval_sem_seg: Fri Apr 30 20:02:40 2021
+[[55725752 21261001]
+ [10824637 52173506]]
+total images 2136
+0.12327144576574867 0.24212122140419368
+0.25232870867997426 0.12846839507412988
+{'iou': array([0.63460733, 0.6192029 ]), 'miou': 0.6269051145379767}
+{'num_workers': 4, 'voc12_root': '/home/ubt/devdata/zdy/AdvCAM/Dataset/cdy', 'train_list': 'cdy12/train_aug.txt', 'val_list': 'voc12/val.txt', 'infer_list': 'voc12/train_aug.txt', 'chainer_eval_set': 'train', 'cam_network': 'net.resnet50_cam', 'cam_crop_size': 512, 'cam_batch_size': 16, 'cam_num_epoches': 5, 'cam_learning_rate': 0.1, 'cam_weight_decay': 0.0001, 'cam_eval_thres': 0.15, 'cam_scales': (1.0, 0.5, 1.5, 2.0), 'conf_fg_thres': 0.7, 'conf_bg_thres': 0.3, 'irn_network': 'net.resnet50_irn', 'irn_crop_size': 512, 'irn_batch_size': 32, 'irn_num_epoches': 3, 'irn_learning_rate': 0.1, 'irn_weight_decay': 0.0001, 'beta': 10, 'exp_times': 8, 'ins_seg_bg_thres': 0.25, 'sem_seg_bg_thres': 0.25, 'log_name': 'sample_train_eval', 'cam_weights_name': 'sess/res50_cam.pth', 'irn_weights_name': 'sess/res50_irn.pth', 'cam_out_dir': 'result/cam_adv_mask_cdy', 'ir_label_out_dir': 'result/ir_label_cdy', 'sem_seg_out_dir': 'result/sem_seg', 'ins_seg_out_dir': 'result/ins_seg', 'train_cam_pass': False, 'make_cam_pass': False, 'eval_cam_pass': False, 'cam_to_ir_label_pass': True, 'train_irn_pass': False, 'make_ins_seg_pass': False, 'eval_ins_seg_pass': False, 'make_sem_seg_pass': False, 'eval_sem_seg_pass': False}
+step.cam_to_ir_label: Thu May  6 21:10:56 2021
+[ ]
+{'num_workers': 4, 'voc12_root': '/home/ubt/devdata/zdy/AdvCAM/Dataset/cdy', 'train_list': 'cdy12/train_aug_building.txt', 'val_list': 'voc12/val.txt', 'infer_list': 'cdy12/train_aug_building.txt', 'chainer_eval_set': 'train', 'cam_network': 'net.resnet50_cam', 'cam_crop_size': 512, 'cam_batch_size': 16, 'cam_num_epoches': 5, 'cam_learning_rate': 0.1, 'cam_weight_decay': 0.0001, 'cam_eval_thres': 0.15, 'cam_scales': (1.0, 0.5, 1.5, 2.0), 'conf_fg_thres': 0.35, 'conf_bg_thres': 0.15, 'irn_network': 'net.resnet50_irn', 'irn_crop_size': 256, 'irn_batch_size': 32, 'irn_num_epoches': 10, 'irn_learning_rate': 0.01, 'irn_weight_decay': 0.0001, 'beta': 10, 'exp_times': 8, 'ins_seg_bg_thres': 0.25, 'sem_seg_bg_thres': 0.25, 'log_name': 'sample_train_eval', 'cam_weights_name': 'sess/res50_cam.pth', 'irn_weights_name': 'sess/res50_irn_cdy.pth', 'cam_out_dir': 'result/cam_adv_mask', 'ir_label_out_dir': 'result/ir_label_cdy', 'sem_seg_out_dir': 'result/sem_seg', 'ins_seg_out_dir': 'result/ins_seg', 'train_cam_pass': False, 'make_cam_pass': False, 'eval_cam_pass': False, 'cam_to_ir_label_pass': False, 'train_irn_pass': True, 'make_ins_seg_pass': False, 'eval_ins_seg_pass': False, 'make_sem_seg_pass': False, 'eval_sem_seg_pass': False}
+step.train_irn: Thu May  6 21:13:21 2021
+model pretrained initialized
+Epoch 1/10
+step:    0/  660 loss:0.7473 0.5907 4.0496 0.2011 imps:4.3 lr: 0.0100 etc:Thu May  6 22:35:56 2021
+step:   50/  660 loss:0.5811 0.4720 4.0401 0.0466 imps:89.8 lr: 0.0093 etc:Thu May  6 21:17:41 2021
+Epoch 2/10
+step:  100/  660 loss:0.3923 0.3321 3.8607 0.0620 imps:138.7 lr: 0.0086 etc:Thu May  6 21:16:59 2021
+Epoch 3/10
+step:  150/  660 loss:0.3222 0.2576 3.4458 0.0840 imps:132.4 lr: 0.0079 etc:Thu May  6 21:16:44 2021
+Epoch 4/10
+step:  200/  660 loss:0.2942 0.2304 3.1728 0.0897 imps:88.2 lr: 0.0072 etc:Thu May  6 21:16:37 2021
+step:  250/  660 loss:0.2741 0.2100 2.9998 0.0770 imps:142.7 lr: 0.0065 etc:Thu May  6 21:16:31 2021
+Epoch 5/10
+step:  300/  660 loss:0.2618 0.2027 2.8614 0.0647 imps:139.2 lr: 0.0058 etc:Thu May  6 21:16:28 2021
+Epoch 6/10
+step:  350/  660 loss:0.2383 0.1809 2.8378 0.0628 imps:132.3 lr: 0.0051 etc:Thu May  6 21:16:27 2021
+Epoch 7/10
+step:  400/  660 loss:0.2478 0.1802 2.7820 0.0576 imps:98.1 lr: 0.0043 etc:Thu May  6 21:16:25 2021
+step:  450/  660 loss:0.2428 0.1784 2.7707 0.0526 imps:141.1 lr: 0.0036 etc:Thu May  6 21:16:23 2021
+Epoch 8/10
+step:  500/  660 loss:0.2322 0.1712 2.7420 0.0495 imps:140.0 lr: 0.0028 etc:Thu May  6 21:16:23 2021
+Epoch 9/10
+step:  550/  660 loss:0.2275 0.1580 2.7198 0.0477 imps:135.3 lr: 0.0020 etc:Thu May  6 21:16:22 2021
+Epoch 10/10
+step:  600/  660 loss:0.2277 0.1683 2.7285 0.0480 imps:114.2 lr: 0.0012 etc:Thu May  6 21:16:21 2021
+step:  650/  660 loss:0.2262 0.1657 2.7401 0.0459 imps:141.7 lr: 0.0002 etc:Thu May  6 21:16:21 2021
+Analyzing displacements mean ... done.
+{'num_workers': 4, 'voc12_root': '/home/ubt/devdata/zdy/AdvCAM/Dataset/cdy', 'train_list': 'voc12/train_aug.txt', 'val_list': 'voc12/val.txt', 'infer_list': 'cdy12/train_aug_building.txt', 'chainer_eval_set': 'train', 'cam_network': 'net.resnet50_cam', 'cam_crop_size': 512, 'cam_batch_size': 16, 'cam_num_epoches': 5, 'cam_learning_rate': 0.1, 'cam_weight_decay': 0.0001, 'cam_eval_thres': 0.15, 'cam_scales': (1.0, 0.5, 1.5, 2.0), 'conf_fg_thres': 0.35, 'conf_bg_thres': 0.15, 'irn_network': 'net.resnet50_irn', 'irn_crop_size': 512, 'irn_batch_size': 32, 'irn_num_epoches': 3, 'irn_learning_rate': 0.1, 'irn_weight_decay': 0.0001, 'beta': 10, 'exp_times': 8, 'ins_seg_bg_thres': 0.25, 'sem_seg_bg_thres': '0.8', 'log_name': 'sample_train_eval', 'cam_weights_name': 'sess/res50_cam.pth', 'irn_weights_name': 'sess/res50_irn_cdy.pth', 'cam_out_dir': 'result/cam_adv_mask_cdy', 'ir_label_out_dir': 'result/ir_label', 'sem_seg_out_dir': 'result/sem_seg_cdy', 'ins_seg_out_dir': 'result/ins_seg', 'train_cam_pass': False, 'make_cam_pass': False, 'eval_cam_pass': False, 'cam_to_ir_label_pass': False, 'train_irn_pass': False, 'make_ins_seg_pass': False, 'eval_ins_seg_pass': False, 'make_sem_seg_pass': True, 'eval_sem_seg_pass': False}
+step.make_sem_seg_labels: Thu May  6 21:16:30 2021
+model pretrained initialized
+sess/res50_irn_cdy.pth
+[]
+[[53093785 23892968]
+ [10292296 52705847]]
+total images 2136
+0.11792401633523752 0.27375376191369816
+0.27497597539062424 0.11845050525363865
+{'iou': array([0.60832222, 0.60657352]), 'miou': 0.6074478705534007}
+{'num_workers': 4, 'voc12_root': '/home/ubt/devdata/zdy/AdvCAM/Dataset/cdy', 'train_list': 'cdy12/train_aug.txt', 'val_list': 'voc12/val.txt', 'infer_list': 'voc12/train_aug.txt', 'chainer_eval_set': 'train', 'cam_network': 'net.resnet50_cam', 'cam_crop_size': 512, 'cam_batch_size': 16, 'cam_num_epoches': 5, 'cam_learning_rate': 0.1, 'cam_weight_decay': 0.0001, 'cam_eval_thres': 0.15, 'cam_scales': (1.0, 0.5, 1.5, 2.0), 'conf_fg_thres': 0.6, 'conf_bg_thres': 0.4, 'irn_network': 'net.resnet50_irn', 'irn_crop_size': 512, 'irn_batch_size': 32, 'irn_num_epoches': 3, 'irn_learning_rate': 0.1, 'irn_weight_decay': 0.0001, 'beta': 10, 'exp_times': 8, 'ins_seg_bg_thres': 0.25, 'sem_seg_bg_thres': 0.25, 'log_name': 'sample_train_eval', 'cam_weights_name': 'sess/res50_cam.pth', 'irn_weights_name': 'sess/res50_irn.pth', 'cam_out_dir': 'result/cam_adv_mask_cdy', 'ir_label_out_dir': 'result/ir_label_cdy', 'sem_seg_out_dir': 'result/sem_seg', 'ins_seg_out_dir': 'result/ins_seg', 'train_cam_pass': False, 'make_cam_pass': False, 'eval_cam_pass': False, 'cam_to_ir_label_pass': True, 'train_irn_pass': False, 'make_ins_seg_pass': False, 'eval_ins_seg_pass': False, 'make_sem_seg_pass': False, 'eval_sem_seg_pass': False}
+step.cam_to_ir_label: Thu May  6 22:37:16 2021
+[ ]
+{'num_workers': 4, 'voc12_root': '/home/ubt/devdata/zdy/AdvCAM/Dataset/cdy', 'train_list': 'cdy12/train_aug_building.txt', 'val_list': 'voc12/val.txt', 'infer_list': 'cdy12/train_aug_building.txt', 'chainer_eval_set': 'train', 'cam_network': 'net.resnet50_cam', 'cam_crop_size': 512, 'cam_batch_size': 16, 'cam_num_epoches': 5, 'cam_learning_rate': 0.1, 'cam_weight_decay': 0.0001, 'cam_eval_thres': 0.15, 'cam_scales': (1.0, 0.5, 1.5, 2.0), 'conf_fg_thres': 0.35, 'conf_bg_thres': 0.15, 'irn_network': 'net.resnet50_irn', 'irn_crop_size': 256, 'irn_batch_size': 32, 'irn_num_epoches': 10, 'irn_learning_rate': 0.01, 'irn_weight_decay': 0.0001, 'beta': 10, 'exp_times': 8, 'ins_seg_bg_thres': 0.25, 'sem_seg_bg_thres': 0.25, 'log_name': 'sample_train_eval', 'cam_weights_name': 'sess/res50_cam.pth', 'irn_weights_name': 'sess/res50_irn_cdy.pth', 'cam_out_dir': 'result/cam_adv_mask', 'ir_label_out_dir': 'result/ir_label_cdy', 'sem_seg_out_dir': 'result/sem_seg', 'ins_seg_out_dir': 'result/ins_seg', 'train_cam_pass': False, 'make_cam_pass': False, 'eval_cam_pass': False, 'cam_to_ir_label_pass': False, 'train_irn_pass': True, 'make_ins_seg_pass': False, 'eval_ins_seg_pass': False, 'make_sem_seg_pass': False, 'eval_sem_seg_pass': False}
+step.train_irn: Thu May  6 22:39:11 2021
+model pretrained initialized
+Epoch 1/10
+step:    0/  660 loss:0.7973 0.6041 4.1417 0.2219 imps:26.9 lr: 0.0100 etc:Thu May  6 22:52:19 2021
+step:   50/  660 loss:0.6368 0.5265 4.1224 0.0448 imps:137.3 lr: 0.0093 etc:Thu May  6 22:41:48 2021
+Epoch 2/10
+step:  100/  660 loss:0.4832 0.4222 4.1188 0.0143 imps:139.1 lr: 0.0086 etc:Thu May  6 22:41:45 2021
+Epoch 3/10
+step:  150/  660 loss:0.4227 0.3571 4.1179 0.0113 imps:131.4 lr: 0.0079 etc:Thu May  6 22:41:45 2021
+Epoch 4/10
+step:  200/  660 loss:0.3936 0.3325 4.0932 0.0160 imps:81.2 lr: 0.0072 etc:Thu May  6 22:41:44 2021
+step:  250/  660 loss:0.3756 0.3082 3.9196 0.0569 imps:141.4 lr: 0.0065 etc:Thu May  6 22:41:43 2021
+Epoch 5/10
+step:  300/  660 loss:0.3643 0.3022 3.7122 0.0823 imps:138.6 lr: 0.0058 etc:Thu May  6 22:41:43 2021
+Epoch 6/10
+step:  350/  660 loss:0.3490 0.2838 3.6212 0.0773 imps:135.8 lr: 0.0051 etc:Thu May  6 22:41:43 2021
+Epoch 7/10
+step:  400/  660 loss:0.3392 0.2771 3.5575 0.0712 imps:98.8 lr: 0.0043 etc:Thu May  6 22:41:43 2021
+step:  450/  660 loss:0.3424 0.2719 3.5237 0.0738 imps:141.0 lr: 0.0036 etc:Thu May  6 22:41:42 2021
+Epoch 8/10
+step:  500/  660 loss:0.3310 0.2655 3.5104 0.0677 imps:139.8 lr: 0.0028 etc:Thu May  6 22:41:42 2021
+Epoch 9/10
+step:  550/  660 loss:0.3351 0.2662 3.4907 0.0667 imps:133.8 lr: 0.0020 etc:Thu May  6 22:41:43 2021
+Epoch 10/10
+step:  600/  660 loss:0.3309 0.2619 3.4850 0.0642 imps:116.3 lr: 0.0012 etc:Thu May  6 22:41:43 2021
+step:  650/  660 loss:0.3313 0.2694 3.4785 0.0659 imps:142.4 lr: 0.0002 etc:Thu May  6 22:41:42 2021
+Analyzing displacements mean ... done.
+{'num_workers': 4, 'voc12_root': '/home/ubt/devdata/zdy/AdvCAM/Dataset/cdy', 'train_list': 'voc12/train_aug.txt', 'val_list': 'voc12/val.txt', 'infer_list': 'cdy12/train_aug_building.txt', 'chainer_eval_set': 'train', 'cam_network': 'net.resnet50_cam', 'cam_crop_size': 512, 'cam_batch_size': 16, 'cam_num_epoches': 5, 'cam_learning_rate': 0.1, 'cam_weight_decay': 0.0001, 'cam_eval_thres': 0.15, 'cam_scales': (1.0, 0.5, 1.5, 2.0), 'conf_fg_thres': 0.35, 'conf_bg_thres': 0.15, 'irn_network': 'net.resnet50_irn', 'irn_crop_size': 512, 'irn_batch_size': 32, 'irn_num_epoches': 3, 'irn_learning_rate': 0.1, 'irn_weight_decay': 0.0001, 'beta': 10, 'exp_times': 8, 'ins_seg_bg_thres': 0.25, 'sem_seg_bg_thres': '0.8', 'log_name': 'sample_train_eval', 'cam_weights_name': 'sess/res50_cam.pth', 'irn_weights_name': 'sess/res50_irn_cdy.pth', 'cam_out_dir': 'result/cam_adv_mask_cdy', 'ir_label_out_dir': 'result/ir_label', 'sem_seg_out_dir': 'result/sem_seg_cdy', 'ins_seg_out_dir': 'result/ins_seg', 'train_cam_pass': False, 'make_cam_pass': False, 'eval_cam_pass': False, 'cam_to_ir_label_pass': False, 'train_irn_pass': False, 'make_ins_seg_pass': False, 'eval_ins_seg_pass': False, 'make_sem_seg_pass': True, 'eval_sem_seg_pass': True}
+step.make_sem_seg_labels: Thu May  6 22:41:51 2021
+model pretrained initialized
+sess/res50_irn_cdy.pth
+[]
+step.eval_sem_seg: Thu May  6 22:48:59 2021
+[[54854680 22132073]
+ [10887903 52110240]]
+total images 2136
+0.1239026528877678 0.2518595691572323
+0.2599790537357499 0.12789704421753145
+{'iou': array([0.62423778, 0.6121239 ]), 'miou': 0.6181808400008593}
+{'num_workers': 4, 'voc12_root': '/home/ubt/devdata/zdy/AdvCAM/Dataset/cdy', 'train_list': 'cdy12/train_aug.txt', 'val_list': 'voc12/val.txt', 'infer_list': 'voc12/train_aug.txt', 'chainer_eval_set': 'train', 'cam_network': 'net.resnet50_cam', 'cam_crop_size': 512, 'cam_batch_size': 16, 'cam_num_epoches': 5, 'cam_learning_rate': 0.1, 'cam_weight_decay': 0.0001, 'cam_eval_thres': 0.15, 'cam_scales': (1.0, 0.5, 1.5, 2.0), 'conf_fg_thres': 0.6, 'conf_bg_thres': 0.5, 'irn_network': 'net.resnet50_irn', 'irn_crop_size': 512, 'irn_batch_size': 32, 'irn_num_epoches': 3, 'irn_learning_rate': 0.1, 'irn_weight_decay': 0.0001, 'beta': 10, 'exp_times': 8, 'ins_seg_bg_thres': 0.25, 'sem_seg_bg_thres': 0.25, 'log_name': 'sample_train_eval', 'cam_weights_name': 'sess/res50_cam.pth', 'irn_weights_name': 'sess/res50_irn.pth', 'cam_out_dir': 'result/cam_adv_mask_cdy', 'ir_label_out_dir': 'result/ir_label_cdy', 'sem_seg_out_dir': 'result/sem_seg', 'ins_seg_out_dir': 'result/ins_seg', 'train_cam_pass': False, 'make_cam_pass': False, 'eval_cam_pass': False, 'cam_to_ir_label_pass': True, 'train_irn_pass': False, 'make_ins_seg_pass': False, 'eval_ins_seg_pass': False, 'make_sem_seg_pass': False, 'eval_sem_seg_pass': False}
+step.cam_to_ir_label: Fri May  7 21:21:05 2021
+[ ]
+{'num_workers': 4, 'voc12_root': '/home/ubt/devdata/zdy/AdvCAM/Dataset/cdy', 'train_list': 'cdy12/train_aug_building.txt', 'val_list': 'voc12/val.txt', 'infer_list': 'cdy12/train_aug_building.txt', 'chainer_eval_set': 'train', 'cam_network': 'net.resnet50_cam', 'cam_crop_size': 512, 'cam_batch_size': 16, 'cam_num_epoches': 5, 'cam_learning_rate': 0.1, 'cam_weight_decay': 0.0001, 'cam_eval_thres': 0.15, 'cam_scales': (1.0, 0.5, 1.5, 2.0), 'conf_fg_thres': 0.35, 'conf_bg_thres': 0.15, 'irn_network': 'net.resnet50_irn', 'irn_crop_size': 256, 'irn_batch_size': 32, 'irn_num_epoches': 10, 'irn_learning_rate': 0.01, 'irn_weight_decay': 0.0001, 'beta': 10, 'exp_times': 8, 'ins_seg_bg_thres': 0.25, 'sem_seg_bg_thres': 0.25, 'log_name': 'sample_train_eval', 'cam_weights_name': 'sess/res50_cam.pth', 'irn_weights_name': 'sess/res50_irn_cdy.pth', 'cam_out_dir': 'result/cam_adv_mask', 'ir_label_out_dir': 'result/ir_label_cdy', 'sem_seg_out_dir': 'result/sem_seg', 'ins_seg_out_dir': 'result/ins_seg', 'train_cam_pass': False, 'make_cam_pass': False, 'eval_cam_pass': False, 'cam_to_ir_label_pass': False, 'train_irn_pass': True, 'make_ins_seg_pass': False, 'eval_ins_seg_pass': False, 'make_sem_seg_pass': False, 'eval_sem_seg_pass': False}
+step.train_irn: Fri May  7 21:23:00 2021
+model pretrained initialized
+Epoch 1/10
+step:    0/  660 loss:0.8494 0.5218 4.1383 0.2016 imps:27.3 lr: 0.0100 etc:Fri May  7 21:35:55 2021
+step:   50/  660 loss:0.6488 0.5471 4.1227 0.0436 imps:137.4 lr: 0.0093 etc:Fri May  7 21:25:36 2021
+Epoch 2/10
+step:  100/  660 loss:0.5319 0.4747 4.1209 0.0160 imps:140.5 lr: 0.0086 etc:Fri May  7 21:25:33 2021
+Epoch 3/10
+step:  150/  660 loss:0.4893 0.4392 4.1222 0.0116 imps:135.3 lr: 0.0079 etc:Fri May  7 21:25:32 2021
+Epoch 4/10
+step:  200/  660 loss:0.4576 0.4016 4.1184 0.0092 imps:87.7 lr: 0.0072 etc:Fri May  7 21:25:32 2021
+step:  250/  660 loss:0.4429 0.3866 4.1208 0.0080 imps:142.6 lr: 0.0065 etc:Fri May  7 21:25:30 2021
+Epoch 5/10
+step:  300/  660 loss:0.4306 0.3682 4.1209 0.0075 imps:138.5 lr: 0.0058 etc:Fri May  7 21:25:31 2021
+Epoch 6/10
+step:  350/  660 loss:0.4171 0.3647 4.1184 0.0079 imps:136.0 lr: 0.0051 etc:Fri May  7 21:25:31 2021
+Epoch 7/10
+step:  400/  660 loss:0.4199 0.3589 4.1139 0.0087 imps:107.8 lr: 0.0043 etc:Fri May  7 21:25:31 2021
+step:  450/  660 loss:0.4080 0.3527 4.1046 0.0118 imps:142.7 lr: 0.0036 etc:Fri May  7 21:25:30 2021
+Epoch 8/10
+step:  500/  660 loss:0.4085 0.3477 4.0704 0.0243 imps:140.7 lr: 0.0028 etc:Fri May  7 21:25:30 2021
+Epoch 9/10
+step:  550/  660 loss:0.4052 0.3421 4.0210 0.0377 imps:136.4 lr: 0.0020 etc:Fri May  7 21:25:30 2021
+Epoch 10/10
+step:  600/  660 loss:0.4011 0.3495 3.9745 0.0497 imps:116.8 lr: 0.0012 etc:Fri May  7 21:25:30 2021
+step:  650/  660 loss:0.4086 0.3362 3.9352 0.0571 imps:142.3 lr: 0.0002 etc:Fri May  7 21:25:30 2021
+Analyzing displacements mean ... done.
+{'num_workers': 4, 'voc12_root': '/home/ubt/devdata/zdy/AdvCAM/Dataset/cdy', 'train_list': 'voc12/train_aug.txt', 'val_list': 'voc12/val.txt', 'infer_list': 'cdy12/train_aug_building.txt', 'chainer_eval_set': 'train', 'cam_network': 'net.resnet50_cam', 'cam_crop_size': 512, 'cam_batch_size': 16, 'cam_num_epoches': 5, 'cam_learning_rate': 0.1, 'cam_weight_decay': 0.0001, 'cam_eval_thres': 0.15, 'cam_scales': (1.0, 0.5, 1.5, 2.0), 'conf_fg_thres': 0.35, 'conf_bg_thres': 0.15, 'irn_network': 'net.resnet50_irn', 'irn_crop_size': 512, 'irn_batch_size': 32, 'irn_num_epoches': 3, 'irn_learning_rate': 0.1, 'irn_weight_decay': 0.0001, 'beta': 10, 'exp_times': 8, 'ins_seg_bg_thres': 0.25, 'sem_seg_bg_thres': '0.8', 'log_name': 'sample_train_eval', 'cam_weights_name': 'sess/res50_cam.pth', 'irn_weights_name': 'sess/res50_irn_cdy.pth', 'cam_out_dir': 'result/cam_adv_mask_cdy', 'ir_label_out_dir': 'result/ir_label', 'sem_seg_out_dir': 'result/sem_seg_cdy', 'ins_seg_out_dir': 'result/ins_seg', 'train_cam_pass': False, 'make_cam_pass': False, 'eval_cam_pass': False, 'cam_to_ir_label_pass': False, 'train_irn_pass': False, 'make_ins_seg_pass': False, 'eval_ins_seg_pass': False, 'make_sem_seg_pass': True, 'eval_sem_seg_pass': True}
+step.make_sem_seg_labels: Fri May  7 21:25:39 2021
+model pretrained initialized
+sess/res50_irn_cdy.pth
+[]
+step.eval_sem_seg: Fri May  7 21:32:48 2021
+[[56957185 20029568]
+ [11872805 51125338]]
+total images 2136
+0.13361314491346 0.2254070181172857
+0.24123955434589783 0.14299810095932908
+{'iou': array([0.64097984, 0.61576234]), 'miou': 0.6283710908320137}
+{'num_workers': 4, 'voc12_root': '/home/ubt/devdata/zdy/AdvCAM/Dataset/cdy', 'train_list': 'cdy12/train_aug.txt', 'val_list': 'voc12/val.txt', 'infer_list': 'voc12/train_aug.txt', 'chainer_eval_set': 'train', 'cam_network': 'net.resnet50_cam', 'cam_crop_size': 512, 'cam_batch_size': 16, 'cam_num_epoches': 5, 'cam_learning_rate': 0.1, 'cam_weight_decay': 0.0001, 'cam_eval_thres': 0.15, 'cam_scales': (1.0, 0.5, 1.5, 2.0), 'conf_fg_thres': 0.7, 'conf_bg_thres': 0.5, 'irn_network': 'net.resnet50_irn', 'irn_crop_size': 512, 'irn_batch_size': 32, 'irn_num_epoches': 3, 'irn_learning_rate': 0.1, 'irn_weight_decay': 0.0001, 'beta': 10, 'exp_times': 8, 'ins_seg_bg_thres': 0.25, 'sem_seg_bg_thres': 0.25, 'log_name': 'sample_train_eval', 'cam_weights_name': 'sess/res50_cam.pth', 'irn_weights_name': 'sess/res50_irn.pth', 'cam_out_dir': 'result/cam_adv_mask_cdy', 'ir_label_out_dir': 'result/ir_label_cdy', 'sem_seg_out_dir': 'result/sem_seg', 'ins_seg_out_dir': 'result/ins_seg', 'train_cam_pass': False, 'make_cam_pass': False, 'eval_cam_pass': False, 'cam_to_ir_label_pass': True, 'train_irn_pass': False, 'make_ins_seg_pass': False, 'eval_ins_seg_pass': False, 'make_sem_seg_pass': False, 'eval_sem_seg_pass': False}
+step.cam_to_ir_label: Fri May  7 21:55:50 2021
+[ ]
+{'num_workers': 4, 'voc12_root': '/home/ubt/devdata/zdy/AdvCAM/Dataset/cdy', 'train_list': 'cdy12/train_aug_building.txt', 'val_list': 'voc12/val.txt', 'infer_list': 'cdy12/train_aug_building.txt', 'chainer_eval_set': 'train', 'cam_network': 'net.resnet50_cam', 'cam_crop_size': 512, 'cam_batch_size': 16, 'cam_num_epoches': 5, 'cam_learning_rate': 0.1, 'cam_weight_decay': 0.0001, 'cam_eval_thres': 0.15, 'cam_scales': (1.0, 0.5, 1.5, 2.0), 'conf_fg_thres': 0.35, 'conf_bg_thres': 0.15, 'irn_network': 'net.resnet50_irn', 'irn_crop_size': 256, 'irn_batch_size': 32, 'irn_num_epoches': 10, 'irn_learning_rate': 0.01, 'irn_weight_decay': 0.0001, 'beta': 10, 'exp_times': 8, 'ins_seg_bg_thres': 0.25, 'sem_seg_bg_thres': 0.25, 'log_name': 'sample_train_eval', 'cam_weights_name': 'sess/res50_cam.pth', 'irn_weights_name': 'sess/res50_irn_cdy.pth', 'cam_out_dir': 'result/cam_adv_mask', 'ir_label_out_dir': 'result/ir_label_cdy', 'sem_seg_out_dir': 'result/sem_seg', 'ins_seg_out_dir': 'result/ins_seg', 'train_cam_pass': False, 'make_cam_pass': False, 'eval_cam_pass': False, 'cam_to_ir_label_pass': False, 'train_irn_pass': True, 'make_ins_seg_pass': False, 'eval_ins_seg_pass': False, 'make_sem_seg_pass': False, 'eval_sem_seg_pass': False}
+step.train_irn: Fri May  7 21:57:45 2021
+model pretrained initialized
+Epoch 1/10
+step:    0/  660 loss:1.0705 0.3661 4.0713 0.2093 imps:26.4 lr: 0.0100 etc:Fri May  7 22:11:07 2021
+step:   50/  660 loss:0.6325 0.4927 4.0429 0.0506 imps:136.9 lr: 0.0093 etc:Fri May  7 22:00:22 2021
+Epoch 2/10
+step:  100/  660 loss:0.4757 0.3896 4.0045 0.0375 imps:139.8 lr: 0.0086 etc:Fri May  7 22:00:19 2021
+Epoch 3/10
+step:  150/  660 loss:0.4078 0.3386 3.6694 0.1202 imps:131.2 lr: 0.0079 etc:Fri May  7 22:00:18 2021
+Epoch 4/10
+step:  200/  660 loss:0.3868 0.3112 3.4676 0.1256 imps:92.8 lr: 0.0072 etc:Fri May  7 22:00:18 2021
+step:  250/  660 loss:0.3628 0.2914 3.3304 0.1281 imps:143.2 lr: 0.0065 etc:Fri May  7 22:00:16 2021
+Epoch 5/10
+step:  300/  660 loss:0.3470 0.2739 3.1946 0.1391 imps:139.9 lr: 0.0058 etc:Fri May  7 22:00:16 2021
+Epoch 6/10
+step:  350/  660 loss:0.3486 0.2786 3.0723 0.1488 imps:134.7 lr: 0.0051 etc:Fri May  7 22:00:16 2021
+Epoch 7/10
+step:  400/  660 loss:0.3360 0.2643 2.9824 0.1458 imps:98.7 lr: 0.0043 etc:Fri May  7 22:00:17 2021
+step:  450/  660 loss:0.3300 0.2621 2.9685 0.1386 imps:140.9 lr: 0.0036 etc:Fri May  7 22:00:16 2021
+Epoch 8/10
+step:  500/  660 loss:0.3263 0.2633 2.9467 0.1340 imps:138.8 lr: 0.0028 etc:Fri May  7 22:00:16 2021
+Epoch 9/10
+step:  550/  660 loss:0.3268 0.2424 2.8936 0.1351 imps:135.1 lr: 0.0020 etc:Fri May  7 22:00:16 2021
+Epoch 10/10
+step:  600/  660 loss:0.3223 0.2603 2.8951 0.1351 imps:110.7 lr: 0.0012 etc:Fri May  7 22:00:16 2021
+step:  650/  660 loss:0.3231 0.2513 2.8893 0.1325 imps:141.1 lr: 0.0002 etc:Fri May  7 22:00:16 2021
+Analyzing displacements mean ... done.
+{'num_workers': 4, 'voc12_root': '/home/ubt/devdata/zdy/AdvCAM/Dataset/cdy', 'train_list': 'voc12/train_aug.txt', 'val_list': 'voc12/val.txt', 'infer_list': 'cdy12/train_aug_building.txt', 'chainer_eval_set': 'train', 'cam_network': 'net.resnet50_cam', 'cam_crop_size': 512, 'cam_batch_size': 16, 'cam_num_epoches': 5, 'cam_learning_rate': 0.1, 'cam_weight_decay': 0.0001, 'cam_eval_thres': 0.15, 'cam_scales': (1.0, 0.5, 1.5, 2.0), 'conf_fg_thres': 0.35, 'conf_bg_thres': 0.15, 'irn_network': 'net.resnet50_irn', 'irn_crop_size': 512, 'irn_batch_size': 32, 'irn_num_epoches': 3, 'irn_learning_rate': 0.1, 'irn_weight_decay': 0.0001, 'beta': 10, 'exp_times': 8, 'ins_seg_bg_thres': 0.25, 'sem_seg_bg_thres': '0.8', 'log_name': 'sample_train_eval', 'cam_weights_name': 'sess/res50_cam.pth', 'irn_weights_name': 'sess/res50_irn_cdy.pth', 'cam_out_dir': 'result/cam_adv_mask_cdy', 'ir_label_out_dir': 'result/ir_label', 'sem_seg_out_dir': 'result/sem_seg_cdy', 'ins_seg_out_dir': 'result/ins_seg', 'train_cam_pass': False, 'make_cam_pass': False, 'eval_cam_pass': False, 'cam_to_ir_label_pass': False, 'train_irn_pass': False, 'make_ins_seg_pass': False, 'eval_ins_seg_pass': False, 'make_sem_seg_pass': True, 'eval_sem_seg_pass': True}
+step.make_sem_seg_labels: Fri May  7 22:00:25 2021
+model pretrained initialized
+sess/res50_irn_cdy.pth
+[]
+step.eval_sem_seg: Fri May  7 22:07:34 2021
+[[60091285 16895468]
+ [14233790 48764353]]
+total images 2136
+0.15603711107047458 0.18521560434035123
+0.21147458211645986 0.178159302375255
+{'iou': array([0.65874728, 0.61036612]), 'miou': 0.6345567000487297}
+{'num_workers': 4, 'voc12_root': '/home/ubt/devdata/zdy/AdvCAM/Dataset/cdy', 'train_list': 'cdy12/train_aug.txt', 'val_list': 'voc12/val.txt', 'infer_list': 'voc12/train_aug.txt', 'chainer_eval_set': 'train', 'cam_network': 'net.resnet50_cam', 'cam_crop_size': 512, 'cam_batch_size': 16, 'cam_num_epoches': 5, 'cam_learning_rate': 0.1, 'cam_weight_decay': 0.0001, 'cam_eval_thres': 0.15, 'cam_scales': (1.0, 0.5, 1.5, 2.0), 'conf_fg_thres': 0.7, 'conf_bg_thres': 0.6, 'irn_network': 'net.resnet50_irn', 'irn_crop_size': 512, 'irn_batch_size': 32, 'irn_num_epoches': 3, 'irn_learning_rate': 0.1, 'irn_weight_decay': 0.0001, 'beta': 10, 'exp_times': 8, 'ins_seg_bg_thres': 0.25, 'sem_seg_bg_thres': 0.25, 'log_name': 'sample_train_eval', 'cam_weights_name': 'sess/res50_cam.pth', 'irn_weights_name': 'sess/res50_irn.pth', 'cam_out_dir': 'result/cam_adv_mask_cdy', 'ir_label_out_dir': 'result/ir_label_cdy', 'sem_seg_out_dir': 'result/sem_seg', 'ins_seg_out_dir': 'result/ins_seg', 'train_cam_pass': False, 'make_cam_pass': False, 'eval_cam_pass': False, 'cam_to_ir_label_pass': True, 'train_irn_pass': False, 'make_ins_seg_pass': False, 'eval_ins_seg_pass': False, 'make_sem_seg_pass': False, 'eval_sem_seg_pass': False}
+step.cam_to_ir_label: Sat May  8 09:53:00 2021
+[ ]
+{'num_workers': 4, 'voc12_root': '/home/ubt/devdata/zdy/AdvCAM/Dataset/cdy', 'train_list': 'cdy12/train_aug_building.txt', 'val_list': 'voc12/val.txt', 'infer_list': 'cdy12/train_aug_building.txt', 'chainer_eval_set': 'train', 'cam_network': 'net.resnet50_cam', 'cam_crop_size': 512, 'cam_batch_size': 16, 'cam_num_epoches': 5, 'cam_learning_rate': 0.1, 'cam_weight_decay': 0.0001, 'cam_eval_thres': 0.15, 'cam_scales': (1.0, 0.5, 1.5, 2.0), 'conf_fg_thres': 0.35, 'conf_bg_thres': 0.15, 'irn_network': 'net.resnet50_irn', 'irn_crop_size': 256, 'irn_batch_size': 32, 'irn_num_epoches': 10, 'irn_learning_rate': 0.01, 'irn_weight_decay': 0.0001, 'beta': 10, 'exp_times': 8, 'ins_seg_bg_thres': 0.25, 'sem_seg_bg_thres': 0.25, 'log_name': 'sample_train_eval', 'cam_weights_name': 'sess/res50_cam.pth', 'irn_weights_name': 'sess/res50_irn_cdy.pth', 'cam_out_dir': 'result/cam_adv_mask', 'ir_label_out_dir': 'result/ir_label_cdy', 'sem_seg_out_dir': 'result/sem_seg', 'ins_seg_out_dir': 'result/ins_seg', 'train_cam_pass': False, 'make_cam_pass': False, 'eval_cam_pass': False, 'cam_to_ir_label_pass': False, 'train_irn_pass': True, 'make_ins_seg_pass': False, 'eval_ins_seg_pass': False, 'make_sem_seg_pass': False, 'eval_sem_seg_pass': False}
+step.train_irn: Sat May  8 09:54:56 2021
+model pretrained initialized
+Epoch 1/10
+step:    0/  660 loss:0.7095 0.6561 4.1095 0.1973 imps:25.3 lr: 0.0100 etc:Sat May  8 10:08:55 2021
+step:   50/  660 loss:0.6603 0.5681 4.0423 0.0484 imps:136.6 lr: 0.0093 etc:Sat May  8 09:57:33 2021
+Epoch 2/10
+step:  100/  660 loss:0.5581 0.5014 4.0475 0.0197 imps:139.4 lr: 0.0086 etc:Sat May  8 09:57:30 2021
+Epoch 3/10
+step:  150/  660 loss:0.5091 0.4582 4.0490 0.0162 imps:131.7 lr: 0.0079 etc:Sat May  8 09:57:29 2021
+Epoch 4/10
+step:  200/  660 loss:0.4841 0.4316 4.0437 0.0163 imps:88.9 lr: 0.0072 etc:Sat May  8 09:57:29 2021
+step:  250/  660 loss:0.4704 0.4122 4.0327 0.0211 imps:142.9 lr: 0.0065 etc:Sat May  8 09:57:27 2021
+Epoch 5/10
+step:  300/  660 loss:0.4587 0.4037 3.9896 0.0427 imps:138.8 lr: 0.0058 etc:Sat May  8 09:57:27 2021
+Epoch 6/10
+step:  350/  660 loss:0.4526 0.4035 3.7728 0.1340 imps:133.4 lr: 0.0051 etc:Sat May  8 09:57:27 2021
+Epoch 7/10
+step:  400/  660 loss:0.4499 0.3832 3.6310 0.1643 imps:108.8 lr: 0.0043 etc:Sat May  8 09:57:27 2021
+step:  450/  660 loss:0.4424 0.3883 3.5886 0.1613 imps:142.6 lr: 0.0036 etc:Sat May  8 09:57:27 2021
+Epoch 8/10
+step:  500/  660 loss:0.4410 0.3820 3.5417 0.1614 imps:139.6 lr: 0.0028 etc:Sat May  8 09:57:27 2021
+Epoch 9/10
+step:  550/  660 loss:0.4403 0.3809 3.5102 0.1593 imps:134.1 lr: 0.0020 etc:Sat May  8 09:57:27 2021
+Epoch 10/10
+step:  600/  660 loss:0.4390 0.3755 3.5096 0.1704 imps:117.5 lr: 0.0012 etc:Sat May  8 09:57:27 2021
+step:  650/  660 loss:0.4334 0.3816 3.5006 0.1579 imps:142.4 lr: 0.0002 etc:Sat May  8 09:57:27 2021
+Analyzing displacements mean ... done.
+{'num_workers': 4, 'voc12_root': '/home/ubt/devdata/zdy/AdvCAM/Dataset/cdy', 'train_list': 'voc12/train_aug.txt', 'val_list': 'voc12/val.txt', 'infer_list': 'cdy12/train_aug_building.txt', 'chainer_eval_set': 'train', 'cam_network': 'net.resnet50_cam', 'cam_crop_size': 512, 'cam_batch_size': 16, 'cam_num_epoches': 5, 'cam_learning_rate': 0.1, 'cam_weight_decay': 0.0001, 'cam_eval_thres': 0.15, 'cam_scales': (1.0, 0.5, 1.5, 2.0), 'conf_fg_thres': 0.35, 'conf_bg_thres': 0.15, 'irn_network': 'net.resnet50_irn', 'irn_crop_size': 512, 'irn_batch_size': 32, 'irn_num_epoches': 3, 'irn_learning_rate': 0.1, 'irn_weight_decay': 0.0001, 'beta': 10, 'exp_times': 8, 'ins_seg_bg_thres': 0.25, 'sem_seg_bg_thres': '0.8', 'log_name': 'sample_train_eval', 'cam_weights_name': 'sess/res50_cam.pth', 'irn_weights_name': 'sess/res50_irn_cdy.pth', 'cam_out_dir': 'result/cam_adv_mask_cdy', 'ir_label_out_dir': 'result/ir_label', 'sem_seg_out_dir': 'result/sem_seg_cdy', 'ins_seg_out_dir': 'result/ins_seg', 'train_cam_pass': False, 'make_cam_pass': False, 'eval_cam_pass': False, 'cam_to_ir_label_pass': False, 'train_irn_pass': False, 'make_ins_seg_pass': False, 'eval_ins_seg_pass': False, 'make_sem_seg_pass': True, 'eval_sem_seg_pass': True}
+step.make_sem_seg_labels: Sat May  8 09:57:35 2021
+model pretrained initialized
+sess/res50_irn_cdy.pth
+[]
+step.eval_sem_seg: Sat May  8 10:04:45 2021
+[[70201092  6785661]
+ [23592283 39405860]]
+total images 2136
+0.23456461642762216 0.06746595781649767
+0.09723833627642309 0.3380767692171095
+{'iou': array([0.69796943, 0.56468489]), 'miou': 0.6313271601311738}
+{'num_workers': 4, 'voc12_root': '/home/ubt/devdata/zdy/AdvCAM/Dataset/cdy', 'train_list': 'cdy12/train_aug.txt', 'val_list': 'voc12/val.txt', 'infer_list': 'voc12/train_aug.txt', 'chainer_eval_set': 'train', 'cam_network': 'net.resnet50_cam', 'cam_crop_size': 512, 'cam_batch_size': 16, 'cam_num_epoches': 5, 'cam_learning_rate': 0.1, 'cam_weight_decay': 0.0001, 'cam_eval_thres': 0.15, 'cam_scales': (1.0, 0.5, 1.5, 2.0), 'conf_fg_thres': 0.8, 'conf_bg_thres': 0.6, 'irn_network': 'net.resnet50_irn', 'irn_crop_size': 512, 'irn_batch_size': 32, 'irn_num_epoches': 3, 'irn_learning_rate': 0.1, 'irn_weight_decay': 0.0001, 'beta': 10, 'exp_times': 8, 'ins_seg_bg_thres': 0.25, 'sem_seg_bg_thres': 0.25, 'log_name': 'sample_train_eval', 'cam_weights_name': 'sess/res50_cam.pth', 'irn_weights_name': 'sess/res50_irn.pth', 'cam_out_dir': 'result/cam_adv_mask_cdy', 'ir_label_out_dir': 'result/ir_label_cdy', 'sem_seg_out_dir': 'result/sem_seg', 'ins_seg_out_dir': 'result/ins_seg', 'train_cam_pass': False, 'make_cam_pass': False, 'eval_cam_pass': False, 'cam_to_ir_label_pass': True, 'train_irn_pass': False, 'make_ins_seg_pass': False, 'eval_ins_seg_pass': False, 'make_sem_seg_pass': False, 'eval_sem_seg_pass': False}
+step.cam_to_ir_label: Sat May  8 10:16:56 2021
+[ ]
+{'num_workers': 4, 'voc12_root': '/home/ubt/devdata/zdy/AdvCAM/Dataset/cdy', 'train_list': 'cdy12/train_aug_building.txt', 'val_list': 'voc12/val.txt', 'infer_list': 'cdy12/train_aug_building.txt', 'chainer_eval_set': 'train', 'cam_network': 'net.resnet50_cam', 'cam_crop_size': 512, 'cam_batch_size': 16, 'cam_num_epoches': 5, 'cam_learning_rate': 0.1, 'cam_weight_decay': 0.0001, 'cam_eval_thres': 0.15, 'cam_scales': (1.0, 0.5, 1.5, 2.0), 'conf_fg_thres': 0.35, 'conf_bg_thres': 0.15, 'irn_network': 'net.resnet50_irn', 'irn_crop_size': 256, 'irn_batch_size': 32, 'irn_num_epoches': 10, 'irn_learning_rate': 0.01, 'irn_weight_decay': 0.0001, 'beta': 10, 'exp_times': 8, 'ins_seg_bg_thres': 0.25, 'sem_seg_bg_thres': 0.25, 'log_name': 'sample_train_eval', 'cam_weights_name': 'sess/res50_cam.pth', 'irn_weights_name': 'sess/res50_irn_cdy.pth', 'cam_out_dir': 'result/cam_adv_mask', 'ir_label_out_dir': 'result/ir_label_cdy', 'sem_seg_out_dir': 'result/sem_seg', 'ins_seg_out_dir': 'result/ins_seg', 'train_cam_pass': False, 'make_cam_pass': False, 'eval_cam_pass': False, 'cam_to_ir_label_pass': False, 'train_irn_pass': True, 'make_ins_seg_pass': False, 'eval_ins_seg_pass': False, 'make_sem_seg_pass': False, 'eval_sem_seg_pass': False}
+step.train_irn: Sat May  8 10:18:50 2021
+model pretrained initialized
+Epoch 1/10
+step:    0/  660 loss:0.9421 0.4404 4.0024 0.1865 imps:26.6 lr: 0.0100 etc:Sat May  8 10:32:07 2021
+step:   50/  660 loss:0.6472 0.5066 3.8256 0.0837 imps:136.6 lr: 0.0093 etc:Sat May  8 10:21:28 2021
+Epoch 2/10
+step:  100/  660 loss:0.5113 0.4239 3.3051 0.2259 imps:138.7 lr: 0.0086 etc:Sat May  8 10:21:25 2021
+Epoch 3/10
+step:  150/  660 loss:0.4502 0.3817 2.8734 0.2549 imps:132.3 lr: 0.0079 etc:Sat May  8 10:21:24 2021
+Epoch 4/10
+step:  200/  660 loss:0.4283 0.3595 2.6655 0.2504 imps:82.0 lr: 0.0072 etc:Sat May  8 10:21:24 2021
+step:  250/  660 loss:0.4008 0.3397 2.6336 0.2332 imps:141.3 lr: 0.0065 etc:Sat May  8 10:21:22 2021
+Epoch 5/10
+step:  300/  660 loss:0.3898 0.3090 2.6677 0.2162 imps:139.4 lr: 0.0058 etc:Sat May  8 10:21:22 2021
+Epoch 6/10
+step:  350/  660 loss:0.3896 0.3244 2.4417 0.2205 imps:131.1 lr: 0.0051 etc:Sat May  8 10:21:23 2021
+Epoch 7/10
+step:  400/  660 loss:0.3737 0.3027 2.4700 0.2144 imps:96.7 lr: 0.0043 etc:Sat May  8 10:21:23 2021
+step:  450/  660 loss:0.3751 0.3101 2.4125 0.2120 imps:140.2 lr: 0.0036 etc:Sat May  8 10:21:22 2021
+Epoch 8/10
+step:  500/  660 loss:0.3633 0.2850 2.4797 0.2034 imps:137.0 lr: 0.0028 etc:Sat May  8 10:21:23 2021
+Epoch 9/10
+step:  550/  660 loss:0.3668 0.3125 2.3451 0.2170 imps:134.7 lr: 0.0020 etc:Sat May  8 10:21:23 2021
+Epoch 10/10
+step:  600/  660 loss:0.3677 0.2854 2.3624 0.2008 imps:106.6 lr: 0.0012 etc:Sat May  8 10:21:23 2021
+step:  650/  660 loss:0.3568 0.2992 2.3337 0.2011 imps:139.3 lr: 0.0002 etc:Sat May  8 10:21:23 2021
+Analyzing displacements mean ... done.
+{'num_workers': 4, 'voc12_root': '/home/ubt/devdata/zdy/AdvCAM/Dataset/cdy', 'train_list': 'voc12/train_aug.txt', 'val_list': 'voc12/val.txt', 'infer_list': 'cdy12/train_aug_building.txt', 'chainer_eval_set': 'train', 'cam_network': 'net.resnet50_cam', 'cam_crop_size': 512, 'cam_batch_size': 16, 'cam_num_epoches': 5, 'cam_learning_rate': 0.1, 'cam_weight_decay': 0.0001, 'cam_eval_thres': 0.15, 'cam_scales': (1.0, 0.5, 1.5, 2.0), 'conf_fg_thres': 0.35, 'conf_bg_thres': 0.15, 'irn_network': 'net.resnet50_irn', 'irn_crop_size': 512, 'irn_batch_size': 32, 'irn_num_epoches': 3, 'irn_learning_rate': 0.1, 'irn_weight_decay': 0.0001, 'beta': 10, 'exp_times': 8, 'ins_seg_bg_thres': 0.25, 'sem_seg_bg_thres': '0.8', 'log_name': 'sample_train_eval', 'cam_weights_name': 'sess/res50_cam.pth', 'irn_weights_name': 'sess/res50_irn_cdy.pth', 'cam_out_dir': 'result/cam_adv_mask_cdy', 'ir_label_out_dir': 'result/ir_label', 'sem_seg_out_dir': 'result/sem_seg_cdy', 'ins_seg_out_dir': 'result/ins_seg', 'train_cam_pass': False, 'make_cam_pass': False, 'eval_cam_pass': False, 'cam_to_ir_label_pass': False, 'train_irn_pass': False, 'make_ins_seg_pass': False, 'eval_ins_seg_pass': False, 'make_sem_seg_pass': True, 'eval_sem_seg_pass': True}
+step.make_sem_seg_labels: Sat May  8 10:21:31 2021
+model pretrained initialized
+sess/res50_irn_cdy.pth
+[]
+step.eval_sem_seg: Sat May  8 10:29:01 2021
+[[68878048  8108705]
+ [24387155 38610988]]
+total images 2136
+0.24056638913437178 0.07998808726995121
+0.1140355004907544 0.3429649279349297
+{'iou': array([0.67944552, 0.54299957]), 'miou': 0.6112225475849965}
+{'num_workers': 4, 'voc12_root': '/home/ubt/devdata/zdy/AdvCAM/Dataset/cdy', 'train_list': 'cdy12/train_aug.txt', 'val_list': 'voc12/val.txt', 'infer_list': 'voc12/train_aug.txt', 'chainer_eval_set': 'train', 'cam_network': 'net.resnet50_cam', 'cam_crop_size': 512, 'cam_batch_size': 16, 'cam_num_epoches': 5, 'cam_learning_rate': 0.1, 'cam_weight_decay': 0.0001, 'cam_eval_thres': 0.15, 'cam_scales': (1.0, 0.5, 1.5, 2.0), 'conf_fg_thres': 0.7, 'conf_bg_thres': 0.5, 'irn_network': 'net.resnet50_irn', 'irn_crop_size': 512, 'irn_batch_size': 32, 'irn_num_epoches': 3, 'irn_learning_rate': 0.1, 'irn_weight_decay': 0.0001, 'beta': 10, 'exp_times': 8, 'ins_seg_bg_thres': 0.25, 'sem_seg_bg_thres': 0.25, 'log_name': 'sample_train_eval', 'cam_weights_name': 'sess/res50_cam.pth', 'irn_weights_name': 'sess/res50_irn.pth', 'cam_out_dir': 'result/cam_adv_mask_cdy', 'ir_label_out_dir': 'result/ir_label_cdy', 'sem_seg_out_dir': 'result/sem_seg', 'ins_seg_out_dir': 'result/ins_seg', 'train_cam_pass': False, 'make_cam_pass': False, 'eval_cam_pass': False, 'cam_to_ir_label_pass': True, 'train_irn_pass': False, 'make_ins_seg_pass': False, 'eval_ins_seg_pass': False, 'make_sem_seg_pass': False, 'eval_sem_seg_pass': False}
+step.cam_to_ir_label: Sat May  8 10:52:59 2021
+[ ]
+{'num_workers': 4, 'voc12_root': '/home/ubt/devdata/zdy/AdvCAM/Dataset/cdy', 'train_list': 'cdy12/train_aug_building.txt', 'val_list': 'voc12/val.txt', 'infer_list': 'cdy12/train_aug_building.txt', 'chainer_eval_set': 'train', 'cam_network': 'net.resnet50_cam', 'cam_crop_size': 512, 'cam_batch_size': 16, 'cam_num_epoches': 5, 'cam_learning_rate': 0.1, 'cam_weight_decay': 0.0001, 'cam_eval_thres': 0.15, 'cam_scales': (1.0, 0.5, 1.5, 2.0), 'conf_fg_thres': 0.35, 'conf_bg_thres': 0.15, 'irn_network': 'net.resnet50_irn', 'irn_crop_size': 256, 'irn_batch_size': 32, 'irn_num_epoches': 10, 'irn_learning_rate': 0.01, 'irn_weight_decay': 0.0001, 'beta': 10, 'exp_times': 8, 'ins_seg_bg_thres': 0.25, 'sem_seg_bg_thres': 0.25, 'log_name': 'sample_train_eval', 'cam_weights_name': 'sess/res50_cam.pth', 'irn_weights_name': 'sess/res50_irn_cdy.pth', 'cam_out_dir': 'result/cam_adv_mask', 'ir_label_out_dir': 'result/ir_label_cdy', 'sem_seg_out_dir': 'result/sem_seg', 'ins_seg_out_dir': 'result/ins_seg', 'train_cam_pass': False, 'make_cam_pass': False, 'eval_cam_pass': False, 'cam_to_ir_label_pass': False, 'train_irn_pass': True, 'make_ins_seg_pass': False, 'eval_ins_seg_pass': False, 'make_sem_seg_pass': False, 'eval_sem_seg_pass': False}
+step.train_irn: Sat May  8 10:54:55 2021
+model pretrained initialized
+Epoch 1/10
+step:    0/  660 loss:0.6276 0.7752 4.0895 0.1967 imps:29.7 lr: 0.0100 etc:Sat May  8 11:06:47 2021
+step:   50/  660 loss:0.6203 0.5346 4.0414 0.0524 imps:138.5 lr: 0.0093 etc:Sat May  8 10:57:30 2021
+Epoch 2/10
+step:  100/  660 loss:0.4714 0.4038 3.9936 0.0429 imps:139.2 lr: 0.0086 etc:Sat May  8 10:57:28 2021
+Epoch 3/10
+step:  150/  660 loss:0.4124 0.3414 3.6713 0.1184 imps:130.6 lr: 0.0079 etc:Sat May  8 10:57:28 2021
+Epoch 4/10
+step:  200/  660 loss:0.3768 0.3121 3.4874 0.1192 imps:87.5 lr: 0.0072 etc:Sat May  8 10:57:27 2021
+step:  250/  660 loss:0.3590 0.2916 3.3412 0.1319 imps:142.3 lr: 0.0065 etc:Sat May  8 10:57:26 2021
+Epoch 5/10
+step:  300/  660 loss:0.3452 0.2725 3.1804 0.1330 imps:138.6 lr: 0.0058 etc:Sat May  8 10:57:26 2021
+Epoch 6/10
+step:  350/  660 loss:0.3398 0.2745 3.0323 0.1505 imps:132.3 lr: 0.0051 etc:Sat May  8 10:57:26 2021
+Epoch 7/10
+step:  400/  660 loss:0.3312 0.2576 2.9944 0.1425 imps:108.1 lr: 0.0043 etc:Sat May  8 10:57:26 2021
+step:  450/  660 loss:0.3269 0.2646 2.9627 0.1446 imps:142.4 lr: 0.0036 etc:Sat May  8 10:57:26 2021
+Epoch 8/10
+step:  500/  660 loss:0.3337 0.2536 2.9095 0.1422 imps:138.4 lr: 0.0028 etc:Sat May  8 10:57:26 2021
+Epoch 9/10
+step:  550/  660 loss:0.3197 0.2582 2.8960 0.1353 imps:134.9 lr: 0.0020 etc:Sat May  8 10:57:26 2021
+Epoch 10/10
+step:  600/  660 loss:0.3219 0.2476 2.8718 0.1270 imps:113.9 lr: 0.0012 etc:Sat May  8 10:57:26 2021
+step:  650/  660 loss:0.3225 0.2446 2.8571 0.1378 imps:141.5 lr: 0.0002 etc:Sat May  8 10:57:26 2021
+Analyzing displacements mean ... done.
+{'num_workers': 4, 'voc12_root': '/home/ubt/devdata/zdy/AdvCAM/Dataset/cdy', 'train_list': 'voc12/train_aug.txt', 'val_list': 'voc12/val.txt', 'infer_list': 'cdy12/train_aug_building.txt', 'chainer_eval_set': 'train', 'cam_network': 'net.resnet50_cam', 'cam_crop_size': 512, 'cam_batch_size': 16, 'cam_num_epoches': 5, 'cam_learning_rate': 0.1, 'cam_weight_decay': 0.0001, 'cam_eval_thres': 0.15, 'cam_scales': (1.0, 0.5, 1.5, 2.0), 'conf_fg_thres': 0.35, 'conf_bg_thres': 0.15, 'irn_network': 'net.resnet50_irn', 'irn_crop_size': 512, 'irn_batch_size': 32, 'irn_num_epoches': 3, 'irn_learning_rate': 0.1, 'irn_weight_decay': 0.0001, 'beta': 10, 'exp_times': 8, 'ins_seg_bg_thres': 0.25, 'sem_seg_bg_thres': '0.7', 'log_name': 'sample_train_eval', 'cam_weights_name': 'sess/res50_cam.pth', 'irn_weights_name': 'sess/res50_irn_cdy.pth', 'cam_out_dir': 'result/cam_adv_mask_cdy', 'ir_label_out_dir': 'result/ir_label', 'sem_seg_out_dir': 'result/sem_seg_cdy', 'ins_seg_out_dir': 'result/ins_seg', 'train_cam_pass': False, 'make_cam_pass': False, 'eval_cam_pass': False, 'cam_to_ir_label_pass': False, 'train_irn_pass': False, 'make_ins_seg_pass': False, 'eval_ins_seg_pass': False, 'make_sem_seg_pass': True, 'eval_sem_seg_pass': True}
+step.make_sem_seg_labels: Sat May  8 10:57:34 2021
+model pretrained initialized
+sess/res50_irn_cdy.pth
+[]
+step.eval_sem_seg: Sat May  8 11:05:50 2021
+[[54119013 22867740]
+ [10376124 52622019]]
+total images 2136
+0.1187704017577168 0.2617558027536112
+0.2663192784030416 0.120841056278429
+{'iou': array([0.6194738 , 0.61283967]), 'miou': 0.6161567304036006}
+{'num_workers': 4, 'voc12_root': '/home/ubt/devdata/zdy/AdvCAM/Dataset/cdy', 'train_list': 'cdy12/train_aug.txt', 'val_list': 'voc12/val.txt', 'infer_list': 'voc12/train_aug.txt', 'chainer_eval_set': 'train', 'cam_network': 'net.resnet50_cam', 'cam_crop_size': 512, 'cam_batch_size': 16, 'cam_num_epoches': 5, 'cam_learning_rate': 0.1, 'cam_weight_decay': 0.0001, 'cam_eval_thres': 0.15, 'cam_scales': (1.0, 0.5, 1.5, 2.0), 'conf_fg_thres': 0.7, 'conf_bg_thres': 0.6, 'irn_network': 'net.resnet50_irn', 'irn_crop_size': 512, 'irn_batch_size': 32, 'irn_num_epoches': 3, 'irn_learning_rate': 0.1, 'irn_weight_decay': 0.0001, 'beta': 10, 'exp_times': 8, 'ins_seg_bg_thres': 0.25, 'sem_seg_bg_thres': 0.25, 'log_name': 'sample_train_eval', 'cam_weights_name': 'sess/res50_cam.pth', 'irn_weights_name': 'sess/res50_irn.pth', 'cam_out_dir': 'result/cam_adv_mask_cdy', 'ir_label_out_dir': 'result/ir_label_cdy', 'sem_seg_out_dir': 'result/sem_seg', 'ins_seg_out_dir': 'result/ins_seg', 'train_cam_pass': False, 'make_cam_pass': False, 'eval_cam_pass': False, 'cam_to_ir_label_pass': True, 'train_irn_pass': False, 'make_ins_seg_pass': False, 'eval_ins_seg_pass': False, 'make_sem_seg_pass': False, 'eval_sem_seg_pass': False}
+step.cam_to_ir_label: Sun May  9 09:44:11 2021
+[ ]
+{'num_workers': 4, 'voc12_root': '/home/ubt/devdata/zdy/AdvCAM/Dataset/cdy', 'train_list': 'cdy12/train_aug_building.txt', 'val_list': 'voc12/val.txt', 'infer_list': 'cdy12/train_aug_building.txt', 'chainer_eval_set': 'train', 'cam_network': 'net.resnet50_cam', 'cam_crop_size': 512, 'cam_batch_size': 16, 'cam_num_epoches': 5, 'cam_learning_rate': 0.1, 'cam_weight_decay': 0.0001, 'cam_eval_thres': 0.15, 'cam_scales': (1.0, 0.5, 1.5, 2.0), 'conf_fg_thres': 0.35, 'conf_bg_thres': 0.15, 'irn_network': 'net.resnet50_irn', 'irn_crop_size': 256, 'irn_batch_size': 32, 'irn_num_epoches': 10, 'irn_learning_rate': 0.01, 'irn_weight_decay': 0.0001, 'beta': 10, 'exp_times': 8, 'ins_seg_bg_thres': 0.25, 'sem_seg_bg_thres': 0.25, 'log_name': 'sample_train_eval', 'cam_weights_name': 'sess/res50_cam.pth', 'irn_weights_name': 'sess/res50_irn_cdy.pth', 'cam_out_dir': 'result/cam_adv_mask', 'ir_label_out_dir': 'result/ir_label_cdy', 'sem_seg_out_dir': 'result/sem_seg', 'ins_seg_out_dir': 'result/ins_seg', 'train_cam_pass': False, 'make_cam_pass': False, 'eval_cam_pass': False, 'cam_to_ir_label_pass': False, 'train_irn_pass': True, 'make_ins_seg_pass': False, 'eval_ins_seg_pass': False, 'make_sem_seg_pass': False, 'eval_sem_seg_pass': False}
+step.train_irn: Sun May  9 09:46:34 2021
+model pretrained initialized
+Epoch 1/10
+step:    0/  660 loss:0.8311 0.5851 4.0698 0.1961 imps:11.7 lr: 0.0100 etc:Sun May  9 10:16:41 2021
+step:   50/  660 loss:0.6747 0.5553 4.0512 0.0473 imps:121.6 lr: 0.0093 etc:Sun May  9 09:49:38 2021
+Epoch 2/10
+step:  100/  660 loss:0.5571 0.4835 4.0429 0.0182 imps:139.6 lr: 0.0086 etc:Sun May  9 09:49:25 2021
+Epoch 3/10
+step:  150/  660 loss:0.5008 0.4446 4.0468 0.0152 imps:134.1 lr: 0.0079 etc:Sun May  9 09:49:21 2021
+Epoch 4/10
+step:  200/  660 loss:0.4791 0.4187 4.0434 0.0149 imps:83.8 lr: 0.0072 etc:Sun May  9 09:49:19 2021
+step:  250/  660 loss:0.4665 0.4094 4.0378 0.0177 imps:141.9 lr: 0.0065 etc:Sun May  9 09:49:16 2021
+Epoch 5/10
+step:  300/  660 loss:0.4569 0.3983 4.0183 0.0268 imps:139.2 lr: 0.0058 etc:Sun May  9 09:49:16 2021
+Epoch 6/10
+step:  350/  660 loss:0.4459 0.3853 3.8905 0.0865 imps:135.7 lr: 0.0051 etc:Sun May  9 09:49:15 2021
+Epoch 7/10
+step:  400/  660 loss:0.4416 0.3847 3.7003 0.1532 imps:104.9 lr: 0.0043 etc:Sun May  9 09:49:15 2021
+step:  450/  660 loss:0.4360 0.3746 3.6147 0.1622 imps:142.0 lr: 0.0036 etc:Sun May  9 09:49:14 2021
+Epoch 8/10
+step:  500/  660 loss:0.4372 0.3828 3.5786 0.1629 imps:139.2 lr: 0.0028 etc:Sun May  9 09:49:14 2021
+Epoch 9/10
+step:  550/  660 loss:0.4374 0.3786 3.5580 0.1664 imps:133.9 lr: 0.0020 etc:Sun May  9 09:49:14 2021
+Epoch 10/10
+step:  600/  660 loss:0.4304 0.3666 3.5034 0.1678 imps:114.3 lr: 0.0012 etc:Sun May  9 09:49:14 2021
+step:  650/  660 loss:0.4264 0.3662 3.5212 0.1646 imps:141.4 lr: 0.0002 etc:Sun May  9 09:49:14 2021
+Analyzing displacements mean ... done.
+{'num_workers': 4, 'voc12_root': '/home/ubt/devdata/zdy/AdvCAM/Dataset/cdy', 'train_list': 'voc12/train_aug.txt', 'val_list': 'voc12/val.txt', 'infer_list': 'cdy12/train_aug_building.txt', 'chainer_eval_set': 'train', 'cam_network': 'net.resnet50_cam', 'cam_crop_size': 512, 'cam_batch_size': 16, 'cam_num_epoches': 5, 'cam_learning_rate': 0.1, 'cam_weight_decay': 0.0001, 'cam_eval_thres': 0.15, 'cam_scales': (1.0, 0.5, 1.5, 2.0), 'conf_fg_thres': 0.35, 'conf_bg_thres': 0.15, 'irn_network': 'net.resnet50_irn', 'irn_crop_size': 512, 'irn_batch_size': 32, 'irn_num_epoches': 3, 'irn_learning_rate': 0.1, 'irn_weight_decay': 0.0001, 'beta': 10, 'exp_times': 8, 'ins_seg_bg_thres': 0.25, 'sem_seg_bg_thres': '0.7', 'log_name': 'sample_train_eval', 'cam_weights_name': 'sess/res50_cam.pth', 'irn_weights_name': 'sess/res50_irn_cdy.pth', 'cam_out_dir': 'result/cam_adv_mask_cdy', 'ir_label_out_dir': 'result/ir_label', 'sem_seg_out_dir': 'result/sem_seg_cdy', 'ins_seg_out_dir': 'result/ins_seg', 'train_cam_pass': False, 'make_cam_pass': False, 'eval_cam_pass': False, 'cam_to_ir_label_pass': False, 'train_irn_pass': False, 'make_ins_seg_pass': False, 'eval_ins_seg_pass': False, 'make_sem_seg_pass': True, 'eval_sem_seg_pass': True}
+step.make_sem_seg_labels: Sun May  9 09:49:22 2021
+model pretrained initialized
+sess/res50_irn_cdy.pth
+[]
+step.eval_sem_seg: Sun May  9 09:56:36 2021
+[[63733938 13252815]
+ [16628811 46369332]]
+total images 2136
+0.17762870071476577 0.14156636390077193
+0.17380522615860117 0.21808002726995246
+{'iou': array([0.68080494, 0.60811475]), 'miou': 0.6444598409779544}
+{'num_workers': 4, 'voc12_root': '/home/ubt/devdata/zdy/AdvCAM/Dataset/cdy', 'train_list': 'cdy12/train_aug.txt', 'val_list': 'voc12/val.txt', 'infer_list': 'voc12/train_aug.txt', 'chainer_eval_set': 'train', 'cam_network': 'net.resnet50_cam', 'cam_crop_size': 512, 'cam_batch_size': 16, 'cam_num_epoches': 5, 'cam_learning_rate': 0.1, 'cam_weight_decay': 0.0001, 'cam_eval_thres': 0.15, 'cam_scales': (1.0, 0.5, 1.5, 2.0), 'conf_fg_thres': 0.7, 'conf_bg_thres': 0.6, 'irn_network': 'net.resnet50_irn', 'irn_crop_size': 512, 'irn_batch_size': 32, 'irn_num_epoches': 3, 'irn_learning_rate': 0.1, 'irn_weight_decay': 0.0001, 'beta': 10, 'exp_times': 8, 'ins_seg_bg_thres': 0.25, 'sem_seg_bg_thres': 0.25, 'log_name': 'sample_train_eval', 'cam_weights_name': 'sess/res50_cam.pth', 'irn_weights_name': 'sess/res50_irn.pth', 'cam_out_dir': 'result/cam_adv_mask_cdy', 'ir_label_out_dir': 'result/ir_label_cdy', 'sem_seg_out_dir': 'result/sem_seg', 'ins_seg_out_dir': 'result/ins_seg', 'train_cam_pass': False, 'make_cam_pass': False, 'eval_cam_pass': False, 'cam_to_ir_label_pass': True, 'train_irn_pass': False, 'make_ins_seg_pass': False, 'eval_ins_seg_pass': False, 'make_sem_seg_pass': False, 'eval_sem_seg_pass': False}
+step.cam_to_ir_label: Sun May  9 10:47:45 2021
+[ ]
+{'num_workers': 4, 'voc12_root': '/home/ubt/devdata/zdy/AdvCAM/Dataset/cdy', 'train_list': 'cdy12/train_aug_building.txt', 'val_list': 'voc12/val.txt', 'infer_list': 'cdy12/train_aug_building.txt', 'chainer_eval_set': 'train', 'cam_network': 'net.resnet50_cam', 'cam_crop_size': 512, 'cam_batch_size': 16, 'cam_num_epoches': 5, 'cam_learning_rate': 0.1, 'cam_weight_decay': 0.0001, 'cam_eval_thres': 0.15, 'cam_scales': (1.0, 0.5, 1.5, 2.0), 'conf_fg_thres': 0.35, 'conf_bg_thres': 0.15, 'irn_network': 'net.resnet50_irn', 'irn_crop_size': 256, 'irn_batch_size': 32, 'irn_num_epoches': 10, 'irn_learning_rate': 0.01, 'irn_weight_decay': 0.0001, 'beta': 10, 'exp_times': 8, 'ins_seg_bg_thres': 0.25, 'sem_seg_bg_thres': 0.25, 'log_name': 'sample_train_eval', 'cam_weights_name': 'sess/res50_cam.pth', 'irn_weights_name': 'sess/res50_irn_cdy.pth', 'cam_out_dir': 'result/cam_adv_mask', 'ir_label_out_dir': 'result/ir_label_cdy', 'sem_seg_out_dir': 'result/sem_seg', 'ins_seg_out_dir': 'result/ins_seg', 'train_cam_pass': False, 'make_cam_pass': False, 'eval_cam_pass': False, 'cam_to_ir_label_pass': False, 'train_irn_pass': True, 'make_ins_seg_pass': False, 'eval_ins_seg_pass': False, 'make_sem_seg_pass': False, 'eval_sem_seg_pass': False}
+step.train_irn: Sun May  9 10:49:41 2021
+model pretrained initialized
+Epoch 1/10
+step:    0/  660 loss:0.9863 0.4309 4.0718 0.1842 imps:27.2 lr: 0.0100 etc:Sun May  9 11:02:40 2021
+step:   50/  660 loss:0.6702 0.5474 4.0453 0.0482 imps:135.4 lr: 0.0093 etc:Sun May  9 10:52:19 2021
+Epoch 2/10
+step:  100/  660 loss:0.5558 0.4939 4.0490 0.0200 imps:140.4 lr: 0.0086 etc:Sun May  9 10:52:16 2021
+Epoch 3/10
+step:  150/  660 loss:0.5052 0.4466 4.0409 0.0172 imps:130.2 lr: 0.0079 etc:Sun May  9 10:52:15 2021
+Epoch 4/10
+step:  200/  660 loss:0.4863 0.4325 4.0265 0.0211 imps:91.0 lr: 0.0072 etc:Sun May  9 10:52:14 2021
+step:  250/  660 loss:0.4683 0.4170 3.9070 0.0697 imps:141.0 lr: 0.0065 etc:Sun May  9 10:52:13 2021
+Epoch 5/10
+step:  300/  660 loss:0.4548 0.4038 3.7626 0.1255 imps:138.3 lr: 0.0058 etc:Sun May  9 10:52:13 2021
+Epoch 6/10
+step:  350/  660 loss:0.4479 0.3951 3.6687 0.1416 imps:131.1 lr: 0.0051 etc:Sun May  9 10:52:13 2021
+Epoch 7/10
+step:  400/  660 loss:0.4431 0.3858 3.6142 0.1504 imps:106.7 lr: 0.0043 etc:Sun May  9 10:52:13 2021
+step:  450/  660 loss:0.4396 0.3911 3.5679 0.1560 imps:141.3 lr: 0.0036 etc:Sun May  9 10:52:13 2021
+Epoch 8/10
+step:  500/  660 loss:0.4378 0.3781 3.5287 0.1577 imps:137.9 lr: 0.0028 etc:Sun May  9 10:52:13 2021
+Epoch 9/10
+step:  550/  660 loss:0.4435 0.3828 3.5024 0.1609 imps:131.3 lr: 0.0020 etc:Sun May  9 10:52:13 2021
+Epoch 10/10
+step:  600/  660 loss:0.4335 0.3778 3.4910 0.1615 imps:116.0 lr: 0.0012 etc:Sun May  9 10:52:13 2021
+step:  650/  660 loss:0.4355 0.3785 3.4876 0.1591 imps:141.6 lr: 0.0002 etc:Sun May  9 10:52:13 2021
+Analyzing displacements mean ... done.
+{'num_workers': 4, 'voc12_root': '/home/ubt/devdata/zdy/AdvCAM/Dataset/cdy', 'train_list': 'voc12/train_aug.txt', 'val_list': 'voc12/val.txt', 'infer_list': 'cdy12/train_aug_building.txt', 'chainer_eval_set': 'train', 'cam_network': 'net.resnet50_cam', 'cam_crop_size': 512, 'cam_batch_size': 16, 'cam_num_epoches': 5, 'cam_learning_rate': 0.1, 'cam_weight_decay': 0.0001, 'cam_eval_thres': 0.15, 'cam_scales': (1.0, 0.5, 1.5, 2.0), 'conf_fg_thres': 0.35, 'conf_bg_thres': 0.15, 'irn_network': 'net.resnet50_irn', 'irn_crop_size': 512, 'irn_batch_size': 32, 'irn_num_epoches': 3, 'irn_learning_rate': 0.1, 'irn_weight_decay': 0.0001, 'beta': 10, 'exp_times': 8, 'ins_seg_bg_thres': 0.25, 'sem_seg_bg_thres': '0.6', 'log_name': 'sample_train_eval', 'cam_weights_name': 'sess/res50_cam.pth', 'irn_weights_name': 'sess/res50_irn_cdy.pth', 'cam_out_dir': 'result/cam_adv_mask_cdy', 'ir_label_out_dir': 'result/ir_label', 'sem_seg_out_dir': 'result/sem_seg_cdy', 'ins_seg_out_dir': 'result/ins_seg', 'train_cam_pass': False, 'make_cam_pass': False, 'eval_cam_pass': False, 'cam_to_ir_label_pass': False, 'train_irn_pass': False, 'make_ins_seg_pass': False, 'eval_ins_seg_pass': False, 'make_sem_seg_pass': True, 'eval_sem_seg_pass': True}
+step.make_sem_seg_labels: Sun May  9 10:52:21 2021
+model pretrained initialized
+sess/res50_irn_cdy.pth
+[]
+step.eval_sem_seg: Sun May  9 10:59:34 2021
+[[55334452 21652301]
+ [11733036 51265107]]
+total images 2136
+0.13224824058136564 0.24405266563472106
+0.25578484857090644 0.13860572308398056
+{'iou': array([0.62369909, 0.60560943]), 'miou': 0.6146542610645132}

@@ -1,0 +1,183 @@
+
+{'num_workers': 4, 'voc12_root': '/home/ubt/devdata/zdy/AdvCAM/Dataset/cdy', 'train_list': 'cdy12/train_aug.txt', 'val_list': 'voc12/val.txt', 'infer_list': 'voc12/train_aug.txt', 'chainer_eval_set': 'train', 'cam_network': 'net.resnet50_cam', 'cam_crop_size': 512, 'cam_batch_size': 16, 'cam_num_epoches': 40, 'cam_learning_rate': 0.0001, 'cam_weight_decay': 0.0001, 'cam_eval_thres': 0.15, 'cam_scales': (1.0, 0.5, 1.5, 2.0), 'conf_fg_thres': 0.35, 'conf_bg_thres': 0.15, 'irn_network': 'net.resnet50_irn', 'irn_crop_size': 512, 'irn_batch_size': 32, 'irn_num_epoches': 3, 'irn_learning_rate': 0.1, 'irn_weight_decay': 0.0001, 'beta': 10, 'exp_times': 9, 'ins_seg_bg_thres': 0.25, 'sem_seg_bg_thres': 0.25, 'log_name': 'sample_train_eval', 'cam_weights_name': 'sess/res50_cam_cdy_time_cost.pth', 'irn_weights_name': 'sess/res50_irn.pth', 'cam_out_dir': 'result/cam_adv_mask', 'ir_label_out_dir': 'result/ir_label', 'sem_seg_out_dir': 'result/sem_seg', 'ins_seg_out_dir': 'result/ins_seg', 'train_cam_pass': True, 'make_cam_pass': False, 'eval_cam_pass': False, 'cam_to_ir_label_pass': False, 'train_irn_pass': False, 'make_ins_seg_pass': False, 'eval_ins_seg_pass': False, 'make_sem_seg_pass': False, 'eval_sem_seg_pass': False}
+step.train_cam: Tue Dec 21 09:36:05 2021
+model pretrained initialized
+Epoch 1/40
+step:    0/ 6440 loss:0.7769 imps:2.5 lr: 0.0001 etc:Tue Dec 21 21:08:09 2021
+step:  100/ 6440 loss:0.4695 imps:87.8 lr: 0.0001 etc:Tue Dec 21 09:55:47 2021
+Epoch 2/40
+step:  200/ 6440 loss:0.3772 imps:20.9 lr: 0.0001 etc:Tue Dec 21 09:52:34 2021
+step:  300/ 6440 loss:0.3401 imps:52.5 lr: 0.0001 etc:Tue Dec 21 09:51:26 2021
+Epoch 3/40
+step:  400/ 6440 loss:0.2968 imps:23.0 lr: 0.0001 etc:Tue Dec 21 09:50:56 2021
+Epoch 4/40
+step:  500/ 6440 loss:0.2525 imps:4.3 lr: 0.0001 etc:Tue Dec 21 09:50:38 2021
+step:  600/ 6440 loss:0.2171 imps:23.8 lr: 0.0001 etc:Tue Dec 21 09:50:25 2021
+Epoch 5/40
+step:  700/ 6440 loss:0.2015 imps:9.9 lr: 0.0001 etc:Tue Dec 21 09:50:17 2021
+step:  800/ 6440 loss:0.1646 imps:24.1 lr: 0.0001 etc:Tue Dec 21 09:50:11 2021
+Epoch 6/40
+{'num_workers': 4, 'voc12_root': '/home/ubt/devdata/zdy/AdvCAM/Dataset/cdy', 'train_list': 'cdy12/train_aug.txt', 'val_list': 'voc12/val.txt', 'infer_list': 'voc12/train_aug.txt', 'chainer_eval_set': 'train', 'cam_network': 'net.resnet50_cam', 'cam_crop_size': 512, 'cam_batch_size': 16, 'cam_num_epoches': 40, 'cam_learning_rate': 0.0001, 'cam_weight_decay': 0.0001, 'cam_eval_thres': 0.15, 'cam_scales': (1.0, 0.5, 1.5, 2.0), 'conf_fg_thres': 0.35, 'conf_bg_thres': 0.15, 'irn_network': 'net.resnet50_irn', 'irn_crop_size': 512, 'irn_batch_size': 32, 'irn_num_epoches': 3, 'irn_learning_rate': 0.1, 'irn_weight_decay': 0.0001, 'beta': 10, 'exp_times': 9, 'ins_seg_bg_thres': 0.25, 'sem_seg_bg_thres': 0.25, 'log_name': 'sample_train_eval', 'cam_weights_name': 'sess/res50_cam_cdy_time_cost.pth', 'irn_weights_name': 'sess/res50_irn.pth', 'cam_out_dir': 'result/cam_adv_mask', 'ir_label_out_dir': 'result/ir_label', 'sem_seg_out_dir': 'result/sem_seg', 'ins_seg_out_dir': 'result/ins_seg', 'train_cam_pass': True, 'make_cam_pass': False, 'eval_cam_pass': False, 'cam_to_ir_label_pass': False, 'train_irn_pass': False, 'make_ins_seg_pass': False, 'eval_ins_seg_pass': False, 'make_sem_seg_pass': False, 'eval_sem_seg_pass': False}
+step.train_cam: Tue Dec 21 09:45:39 2021
+model pretrained initialized
+Epoch 1/40
+step:    0/ 6440 loss:0.6695 imps:36.0 lr: 0.0001 etc:Tue Dec 21 10:33:27 2021
+step:  100/ 6440 loss:0.4604 imps:130.3 lr: 0.0001 etc:Tue Dec 21 09:58:52 2021
+19.618715524673462
+Epoch 2/40
+step:  200/ 6440 loss:0.3812 imps:26.0 lr: 0.0001 etc:Tue Dec 21 09:58:49 2021
+{'num_workers': 4, 'voc12_root': '/home/ubt/devdata/zdy/AdvCAM/Dataset/cdy', 'train_list': 'cdy12/train_aug.txt', 'val_list': 'voc12/val.txt', 'infer_list': 'voc12/train_aug.txt', 'chainer_eval_set': 'train', 'cam_network': 'net.resnet50_cam', 'cam_crop_size': 512, 'cam_batch_size': 16, 'cam_num_epoches': 40, 'cam_learning_rate': 0.0001, 'cam_weight_decay': 0.0001, 'cam_eval_thres': 0.15, 'cam_scales': (1.0, 0.5, 1.5, 2.0), 'conf_fg_thres': 0.35, 'conf_bg_thres': 0.15, 'irn_network': 'net.resnet50_irn', 'irn_crop_size': 512, 'irn_batch_size': 32, 'irn_num_epoches': 3, 'irn_learning_rate': 0.1, 'irn_weight_decay': 0.0001, 'beta': 10, 'exp_times': 9, 'ins_seg_bg_thres': 0.25, 'sem_seg_bg_thres': 0.25, 'log_name': 'sample_train_eval', 'cam_weights_name': 'sess/res50_cam_cdy_time_cost.pth', 'irn_weights_name': 'sess/res50_irn.pth', 'cam_out_dir': 'result/cam_adv_mask', 'ir_label_out_dir': 'result/ir_label', 'sem_seg_out_dir': 'result/sem_seg', 'ins_seg_out_dir': 'result/ins_seg', 'train_cam_pass': True, 'make_cam_pass': False, 'eval_cam_pass': False, 'cam_to_ir_label_pass': False, 'train_irn_pass': False, 'make_ins_seg_pass': False, 'eval_ins_seg_pass': False, 'make_sem_seg_pass': False, 'eval_sem_seg_pass': False}
+step.train_cam: Tue Dec 21 09:46:49 2021
+model pretrained initialized
+2588 161
+Epoch 1/40
+step:    0/ 6440 loss:0.7522 imps:35.5 lr: 0.0001 etc:Tue Dec 21 10:35:11 2021
+{'num_workers': 4, 'voc12_root': '/home/ubt/devdata/zdy/AdvCAM/Dataset/cdy', 'train_list': 'cdy12/train_aug.txt', 'val_list': 'voc12/val.txt', 'infer_list': 'voc12/train_aug.txt', 'chainer_eval_set': 'train', 'cam_network': 'net.resnet50_cam', 'cam_crop_size': 512, 'cam_batch_size': 16, 'cam_num_epoches': 40, 'cam_learning_rate': 0.0001, 'cam_weight_decay': 0.0001, 'cam_eval_thres': 0.15, 'cam_scales': (1.0, 0.5, 1.5, 2.0), 'conf_fg_thres': 0.35, 'conf_bg_thres': 0.15, 'irn_network': 'net.resnet50_irn', 'irn_crop_size': 512, 'irn_batch_size': 32, 'irn_num_epoches': 3, 'irn_learning_rate': 0.1, 'irn_weight_decay': 0.0001, 'beta': 10, 'exp_times': 9, 'ins_seg_bg_thres': 0.25, 'sem_seg_bg_thres': 0.25, 'log_name': 'sample_train_eval', 'cam_weights_name': 'sess/res50_cam_cdy_time_cost.pth', 'irn_weights_name': 'sess/res50_irn.pth', 'cam_out_dir': 'result/cam_adv_mask', 'ir_label_out_dir': 'result/ir_label', 'sem_seg_out_dir': 'result/sem_seg', 'ins_seg_out_dir': 'result/ins_seg', 'train_cam_pass': True, 'make_cam_pass': False, 'eval_cam_pass': False, 'cam_to_ir_label_pass': False, 'train_irn_pass': False, 'make_ins_seg_pass': False, 'eval_ins_seg_pass': False, 'make_sem_seg_pass': False, 'eval_sem_seg_pass': False}
+step.train_cam: Tue Dec 21 09:47:10 2021
+model pretrained initialized
+Epoch 1/40
+step:    0/ 6440 loss:0.7853 imps:35.3 lr: 0.0001 etc:Tue Dec 21 10:35:46 2021
+step:  100/ 6440 loss:0.4722 imps:129.8 lr: 0.0001 etc:Tue Dec 21 10:00:25 2021
+19.677765369415283
+Epoch 2/40
+step:  200/ 6440 loss:0.3844 imps:26.0 lr: 0.0001 etc:Tue Dec 21 10:00:21 2021
+step:  300/ 6440 loss:0.3098 imps:61.0 lr: 0.0001 etc:Tue Dec 21 10:00:17 2021
+19.60749363899231
+Epoch 3/40
+step:  400/ 6440 loss:0.2810 imps:25.8 lr: 0.0001 etc:Tue Dec 21 10:00:18 2021
+19.719849109649658
+Epoch 4/40
+step:  500/ 6440 loss:0.2317 imps:4.7 lr: 0.0001 etc:Tue Dec 21 10:00:20 2021
+step:  600/ 6440 loss:0.2009 imps:25.7 lr: 0.0001 etc:Tue Dec 21 10:00:20 2021
+19.896779775619507
+Epoch 5/40
+step:  700/ 6440 loss:0.1618 imps:10.6 lr: 0.0001 etc:Tue Dec 21 10:00:22 2021
+step:  800/ 6440 loss:0.1498 imps:25.5 lr: 0.0001 etc:Tue Dec 21 10:00:23 2021
+20.06800103187561
+Epoch 6/40
+step:  900/ 6440 loss:0.1291 imps:13.8 lr: 0.0001 etc:Tue Dec 21 10:00:25 2021
+20.134008169174194
+Epoch 7/40
+step: 1000/ 6440 loss:0.1145 imps:4.5 lr: 0.0001 etc:Tue Dec 21 10:00:26 2021
+step: 1100/ 6440 loss:0.0998 imps:15.9 lr: 0.0001 etc:Tue Dec 21 10:00:27 2021
+20.132293462753296
+Epoch 8/40
+step: 1200/ 6440 loss:0.0857 imps:8.0 lr: 0.0001 etc:Tue Dec 21 10:00:28 2021
+20.13916516304016
+Epoch 9/40
+step: 1300/ 6440 loss:0.0838 imps:1.3 lr: 0.0001 etc:Tue Dec 21 10:00:29 2021
+step: 1400/ 6440 loss:0.0708 imps:10.4 lr: 0.0001 etc:Tue Dec 21 10:00:29 2021
+20.151686668395996
+Epoch 10/40
+step: 1500/ 6440 loss:0.0693 imps:4.5 lr: 0.0001 etc:Tue Dec 21 10:00:30 2021
+step: 1600/ 6440 loss:0.0629 imps:12.2 lr: 0.0001 etc:Tue Dec 21 10:00:30 2021
+20.171027421951294
+Epoch 11/40
+step: 1700/ 6440 loss:0.0577 imps:6.9 lr: 0.0001 etc:Tue Dec 21 10:00:31 2021
+20.18884015083313
+Epoch 12/40
+step: 1800/ 6440 loss:0.0432 imps:2.1 lr: 0.0001 etc:Tue Dec 21 10:00:31 2021
+step: 1900/ 6440 loss:0.0499 imps:8.8 lr: 0.0001 etc:Tue Dec 21 10:00:31 2021
+20.218668937683105
+Epoch 13/40
+step: 2000/ 6440 loss:0.0522 imps:4.4 lr: 0.0001 etc:Tue Dec 21 10:00:32 2021
+20.20410466194153
+Epoch 14/40
+step: 2100/ 6440 loss:0.0359 imps:0.5 lr: 0.0001 etc:Tue Dec 21 10:00:33 2021
+step: 2200/ 6440 loss:0.0381 imps:6.3 lr: 0.0001 etc:Tue Dec 21 10:00:33 2021
+20.206738233566284
+Epoch 15/40
+step: 2300/ 6440 loss:0.0378 imps:2.6 lr: 0.0001 etc:Tue Dec 21 10:00:33 2021
+step: 2400/ 6440 loss:0.0362 imps:7.9 lr: 0.0001 etc:Tue Dec 21 10:00:33 2021
+20.208754539489746
+Epoch 16/40
+step: 2500/ 6440 loss:0.0352 imps:4.4 lr: 0.0001 etc:Tue Dec 21 10:00:34 2021
+20.224316835403442
+Epoch 17/40
+step: 2600/ 6440 loss:0.0247 imps:1.2 lr: 0.0001 etc:Tue Dec 21 10:00:34 2021
+step: 2700/ 6440 loss:0.0296 imps:5.9 lr: 0.0001 etc:Tue Dec 21 10:00:34 2021
+20.2115216255188
+Epoch 18/40
+step: 2800/ 6440 loss:0.0286 imps:2.9 lr: 0.0001 etc:Tue Dec 21 10:00:34 2021
+20.218923568725586
+Epoch 19/40
+step: 2900/ 6440 loss:0.0262 imps:0.1 lr: 0.0001 etc:Tue Dec 21 10:00:35 2021
+step: 3000/ 6440 loss:0.0249 imps:4.4 lr: 0.0001 etc:Tue Dec 21 10:00:35 2021
+20.196372985839844
+Epoch 20/40
+step: 3100/ 6440 loss:0.0226 imps:1.7 lr: 0.0001 etc:Tue Dec 21 10:00:35 2021
+step: 3200/ 6440 loss:0.0235 imps:5.7 lr: 0.0001 etc:Tue Dec 21 10:00:35 2021
+20.17598032951355
+Epoch 21/40
+step: 3300/ 6440 loss:0.0235 imps:3.1 lr: 0.0001 etc:Tue Dec 21 10:00:35 2021
+20.16071343421936
+Epoch 22/40
+step: 3400/ 6440 loss:0.0217 imps:0.8 lr: 0.0001 etc:Tue Dec 21 10:00:35 2021
+step: 3500/ 6440 loss:0.0218 imps:4.4 lr: 0.0000 etc:Tue Dec 21 10:00:35 2021
+20.140140295028687
+Epoch 23/40
+step: 3600/ 6440 loss:0.0197 imps:2.1 lr: 0.0000 etc:Tue Dec 21 10:00:35 2021
+step: 3700/ 6440 loss:0.0201 imps:5.5 lr: 0.0000 etc:Tue Dec 21 10:00:35 2021
+20.142274618148804
+Epoch 24/40
+step: 3800/ 6440 loss:0.0199 imps:3.3 lr: 0.0000 etc:Tue Dec 21 10:00:35 2021
+20.140997886657715
+Epoch 25/40
+step: 3900/ 6440 loss:0.0201 imps:1.2 lr: 0.0000 etc:Tue Dec 21 10:00:35 2021
+step: 4000/ 6440 loss:0.0162 imps:4.4 lr: 0.0000 etc:Tue Dec 21 10:00:35 2021
+20.155070781707764
+Epoch 26/40
+step: 4100/ 6440 loss:0.0175 imps:2.4 lr: 0.0000 etc:Tue Dec 21 10:00:35 2021
+20.149245023727417
+Epoch 27/40
+step: 4200/ 6440 loss:0.0187 imps:0.5 lr: 0.0000 etc:Tue Dec 21 10:00:35 2021
+step: 4300/ 6440 loss:0.0179 imps:3.4 lr: 0.0000 etc:Tue Dec 21 10:00:35 2021
+20.134917736053467
+Epoch 28/40
+step: 4400/ 6440 loss:0.0167 imps:1.6 lr: 0.0000 etc:Tue Dec 21 10:00:35 2021
+step: 4500/ 6440 loss:0.0179 imps:4.4 lr: 0.0000 etc:Tue Dec 21 10:00:35 2021
+20.138952016830444
+Epoch 29/40
+step: 4600/ 6440 loss:0.0199 imps:2.6 lr: 0.0000 etc:Tue Dec 21 10:00:35 2021
+20.132473468780518
+Epoch 30/40
+step: 4700/ 6440 loss:0.0143 imps:0.9 lr: 0.0000 etc:Tue Dec 21 10:00:36 2021
+step: 4800/ 6440 loss:0.0131 imps:3.5 lr: 0.0000 etc:Tue Dec 21 10:00:35 2021
+20.145009756088257
+Epoch 31/40
+step: 4900/ 6440 loss:0.0134 imps:1.9 lr: 0.0000 etc:Tue Dec 21 10:00:36 2021
+20.13321089744568
+Epoch 32/40
+step: 5000/ 6440 loss:0.0147 imps:0.3 lr: 0.0000 etc:Tue Dec 21 10:00:36 2021
+step: 5100/ 6440 loss:0.0157 imps:2.8 lr: 0.0000 etc:Tue Dec 21 10:00:36 2021
+20.138842821121216
+Epoch 33/40
+step: 5200/ 6440 loss:0.0185 imps:1.2 lr: 0.0000 etc:Tue Dec 21 10:00:36 2021
+step: 5300/ 6440 loss:0.0122 imps:3.6 lr: 0.0000 etc:Tue Dec 21 10:00:36 2021
+20.140514373779297
+Epoch 34/40
+step: 5400/ 6440 loss:0.0164 imps:2.1 lr: 0.0000 etc:Tue Dec 21 10:00:36 2021
+20.13743257522583
+Epoch 35/40
+step: 5500/ 6440 loss:0.0107 imps:0.6 lr: 0.0000 etc:Tue Dec 21 10:00:36 2021
+step: 5600/ 6440 loss:0.0187 imps:2.9 lr: 0.0000 etc:Tue Dec 21 10:00:36 2021
+20.12070369720459
+Epoch 36/40
+step: 5700/ 6440 loss:0.0084 imps:1.5 lr: 0.0000 etc:Tue Dec 21 10:00:36 2021
+20.138315439224243
+Epoch 37/40
+step: 5800/ 6440 loss:0.0164 imps:0.1 lr: 0.0000 etc:Tue Dec 21 10:00:36 2021
+step: 5900/ 6440 loss:0.0125 imps:2.3 lr: 0.0000 etc:Tue Dec 21 10:00:36 2021
+20.145490169525146
+Epoch 38/40
+step: 6000/ 6440 loss:0.0139 imps:0.9 lr: 0.0000 etc:Tue Dec 21 10:00:36 2021
+step: 6100/ 6440 loss:0.0133 imps:3.0 lr: 0.0000 etc:Tue Dec 21 10:00:36 2021
+20.140984773635864
+Epoch 39/40
+step: 6200/ 6440 loss:0.0169 imps:1.7 lr: 0.0000 etc:Tue Dec 21 10:00:36 2021
+20.12664031982422
+Epoch 40/40
+step: 6300/ 6440 loss:0.0117 imps:0.4 lr: 0.0000 etc:Tue Dec 21 10:00:36 2021
+step: 6400/ 6440 loss:0.0153 imps:2.4 lr: 0.0000 etc:Tue Dec 21 10:00:36 2021
+20.132280349731445
+20.113662552833556
