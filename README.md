@@ -4,7 +4,7 @@ The implementation of Improved Pseudomasks Generation for Weakly Supervised Buil
 
 # Installation
 
-- We kindly refer to the offical implementation of [IRN ](https://github.com/jiwoon-ahn/irn) and  [AdvCAM ]( of [IRN ](https://github.com/jiwoon-ahn/irn).).
+- We kindly refer to the offical implementation of [IRN ](https://github.com/jiwoon-ahn/irn) and  [AdvCAM ](https://github.com/jbeomlee93/AdvCAM).
 - This repository is tested on Ubuntu 18.04, with Python 3.6, PyTorch 1.4, pydensecrf, scipy, chaniercv, imageio, and opencv-python.
 ## Usage
 
@@ -86,4 +86,4 @@ python run_sample.py --make_sem_seg_pass True --eval_sem_seg_pass True --sem_seg
 
 
 ## Acknowledgment
-This code is heavily borrowed from [IRN](https://github.com/jiwoon-ahn/irn) and [AdvCAM ]( of [IRN ](https://github.com/jiwoon-ahn/irn).), thanks!
+This code is heavily borrowed from [IRN](https://github.com/jiwoon-ahn/irn) and [AdvCAM ](https://github.com/jbeomlee93/AdvCAM), thanks!
