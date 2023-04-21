@@ -38,7 +38,7 @@ python obtain_CAM_masking.py --adv_iter 2 --AD_coeff 7 --AD_stepsize 0.08 --scor
 							   --train_list cdy12/train_aug.txt \
 							   --cam_weights_name sess/res50_cam_cdy.pth \
 							   --cam_out_dir result/cam_adv_mask_cdy
-注意注意：voc12_root 和 train_list 参数注意修改  adv_iter为迭代次数，遥感影像一般不会太大；
+注意注意：voc12_root 和 train_list 参数注意修改  adv_iter为迭代次数，遥感影像建筑物提取任务不会设置太大；
 ```
 
 #### Step 4. 评估类激活图精度
